@@ -1,0 +1,24 @@
+{
+  "name": "colorify",
+  "version": "0.0.1",
+  "description": "Simple Javascript library to recolor images using HTML5 Canvas/WebGL API",
+  "main": "src/colorify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html5",
+    "canvas",
+    "blend",
+    "image",
+    "js"
+  ],
+  "author": "Marco Liberati <dej611@gmail.com>",
+  "license": "GPL",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-header": "^1.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0"
+  }
+}
