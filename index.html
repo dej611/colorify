@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Colorify by dej611</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Colorify</h1>
+        <h2>Simple HTML5 library to colorize your images</h2>
+        <a href="https://github.com/dej611/colorify" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>
+<a id="colorify" class="anchor" href="#colorify" aria-hidden="true"><span class="octicon octicon-link"></span></a>Colorify</h2>
+
+<p>While working on some file manipulation I thought it may be useful to have a library to encapsulate some code I've been writing.
+Maybe it can be useful for somebody, so here it is.</p>
+
+<p>This library enable you to colorize images in one go to multiple colors.</p>
+
+<p>for the moment only Canvas HTML5 API is used: in modern browsers it can use blend modes while the fallback for older browsers (IE...) is a more expensive pixel by pixel manipulation.</p>
+
+<h2>
+<a id="install-the-library" class="anchor" href="#install-the-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install the library</h2>
+
+<p>Browser installation: get the minified <code>colorify.min.js</code> file and add it to your page:</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>./path/to/colorify.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>NPM &amp; Bower: coming soon...</p>
+
+<h2>
+<a id="use-the-library" class="anchor" href="#use-the-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use the library</h2>
+
+<p>Create a painter, then use it to colorize your images: the result will be the second argument in the callback.</p>
+
+<div class="highlight highlight-js"><pre><span class="pl-k">var</span> painter <span class="pl-k">=</span> Colorify.create();
+
+painter.colorify(<span class="pl-s"><span class="pl-pds">'</span>my-image-url.png<span class="pl-pds">'</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>red<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>blue<span class="pl-pds">'</span></span>, etc...], {}, <span class="pl-k">function</span>(<span class="pl-smi">error</span>, <span class="pl-smi">results</span>){
+    <span class="pl-c">// here results will be an array of images (encoded in Base64 format)</span>
+    imageElement.<span class="pl-c1">src</span> <span class="pl-k">=</span> results[<span class="pl-c1">0</span>];
+});</pre></div>
+
+<p>For the full API documentation have a look at: <a href="...">Colorify page</a></p>
+
+<h2>
+<a id="run-the-examples" class="anchor" href="#run-the-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run the examples</h2>
+
+<p>Open the Command Prompt in Windows, the Terminal in OSX or the console in Linux and type:</p>
+
+<div class="highlight highlight-bash"><pre>python -m SimpleHTTPServer</pre></div>
+
+<p>Now open your browser and go to <code>http://localhost:8000/examples/&lt;name-of-the-example&gt;.htm</code></p>
+
+<h2>
+<a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<p>Any contribute is very welcome:</p>
+
+<ul>
+<li>In case you find some bug please log an issue</li>
+<li>In case there's a pull request, please add a test for the issue fixed (testing arriving soon...)</li>
+</ul>
+
+<p>In case you have any good idea to propose to the project let me know, you can find me here: <a href="https://twitter.com/dej611">@dej611</a>.</p>
+
+<p>This project uses Gulp as build system, so it's enough to run <code>gulp</code> in your console to make the minified version.</p>
+
+<h2>
+<a id="faq" class="anchor" href="#faq" aria-hidden="true"><span class="octicon octicon-link"></span></a>FAQ</h2>
+
+<p><strong>The Javascript console reports "The canvas has been tainted by cross-origin data"</strong></p>
+
+<p>This is most probably because you're trying to use an image from a different domain (Cross Origin Resource Sharing) which is not allowed for security reasons: see this <a href="http://stackoverflow.com/questions/13674835/canvas-tainted-by-cross-origin-data">SO explanation</a> for some details.<br>
+Also, it may happen if you're using some SVGs: still <a href="https://code.google.com/p/chromium/issues/detail?id=294129">for security reasons</a> it still not allowed.
+Last option: have you started the web server when you're looking at the HTML page in Chrome? Using the file protocol every request for an external resource is considered CORS by default (see first point here).</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Licensed under GPL v.2 (see LICENSE file)</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/dej611/colorify/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/dej611/colorify/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/dej611/colorify"></a> is maintained by <a href="https://github.com/dej611">dej611</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-4417733-10");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
