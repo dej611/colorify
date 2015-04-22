@@ -19,6 +19,7 @@
   <body>
     <header>
       <div class="inner">
+        <img id="logo" src="images/logo.png"></img>
         <h1>Colorify</h1>
         <h2>Simple HTML5 library to colorize your images</h2>
         <a href="https://github.com/dej611/colorify" class="button"><small>View project on</small> GitHub</a>
@@ -55,8 +56,8 @@ Maybe it can be useful for somebody, so here it is.</p>
 <div class="highlight highlight-js"><pre><span class="pl-k">var</span> painter <span class="pl-k">=</span> Colorify.create();
 
 painter.colorify(<span class="pl-s"><span class="pl-pds">'</span>my-image-url.png<span class="pl-pds">'</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>red<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>blue<span class="pl-pds">'</span></span>, etc...], {}, <span class="pl-k">function</span>(<span class="pl-smi">error</span>, <span class="pl-smi">results</span>){
-    <span class="pl-c">// here results will be an array of images (encoded in Base64 format)</span>
-    imageElement.<span class="pl-c1">src</span> <span class="pl-k">=</span> results[<span class="pl-c1">0</span>];
+  <span class="pl-c">// here results will be an array of images (encoded in Base64 format)</span>
+  imageElement.<span class="pl-c1">src</span> <span class="pl-k">=</span> results[<span class="pl-c1">0</span>];
 });</pre></div>
 
 <p>For the full API documentation have a look at: <a href="...">Colorify page</a></p>

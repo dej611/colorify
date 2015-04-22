@@ -451,7 +451,7 @@ header {
   padding-top: 40px;
   padding-bottom: 40px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
-  background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
+  background: #2e7bcf url(../images/header-bg-grey.jpg) 0 0 repeat-x;
   border-bottom: solid 1px #275da1;
 }
 
@@ -770,6 +770,28 @@ footer a:hover {
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
 
+#logo {
+  float: left;
+  width: 256px;
+  margin-top: -30px;
+}
+
+pre {
+  color: rgb(0, 94, 127);
+}
+
+span.pl-k {
+  color: rgb(0,141,191);
+}
+
+span.pl-s {
+  color: rgb(255,131,0);
+}
+
+span.pl-c {
+  color: rgb(200, 200, 200);
+}
+
 /* #Media Queries
 ================================================== */
 
@@ -802,6 +824,9 @@ footer a:hover {
     padding-right: 0;
     margin-left: 0;
     content: none;
+  }
+  #logo {
+    width: 112px;
   }
 }
 
