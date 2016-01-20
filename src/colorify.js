@@ -246,7 +246,7 @@
   }
 
   function isGradient(color){
-    return Array.isArray(color) && ('value' in color[0]);
+    return Array.isArray(color) && !isString(color[0]) && ('value' in color[0]);
   }
 
   function createColoredLayer(canvas, context, color){
