@@ -6,9 +6,9 @@ export default (mask, targets, colors) => {
   const width = mask.width;
   const height = mask.height;
 
-  targets.forEach( (target, index) => {
+  targets.forEach((target, index) => {
     const ctx = target.getContext('2d');
-    recolorLayer(ctx, width, height, colors[index]);
+    recolorLayer(ctx, colors[index], width, height);
     ctx.globalCompositeOperation = 'multiply';
     ctx.drawImage(mask, 0, 0);
     ctx.globalCompositeOperation = 'destination-atop';

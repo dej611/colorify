@@ -1,5 +1,5 @@
 /* @flow */
-import {isGradient, ensureArray, createCanvas, hasCanvasBlends} from './util';
+import { isGradient, ensureArray, createCanvas, hasCanvasBlends } from './util';
 import validator from './validator';
 import recolorWithBlends from './painters/blends';
 import recolorWithPixelManipulation from './painters/pixelByPixel';
@@ -9,13 +9,15 @@ const recolorImage = (mask, colors) => {
   const height = mask.height;
 
   // create a new canvas for each new colored version of the image
-  const targets = colors.map( () => createCanvas(width, height) );
+  const targets = colors.map(() => createCanvas(width, height));
 
   // Check the support for advanced canvas features and use the appropriate processor
-  const processor = hasCanvasBlends ? recolorWithBlends : recolorWithPixelManipulation;
+  const processor = hasCanvasBlends
+    ? recolorWithBlends
+    : recolorWithPixelManipulation;
   processor(mask, targets, colors);
 
-  return targets.map( (canvas) => canvas.toDataURL());
+  return targets.map(canvas => canvas.toDataURL());
 };
 
 export default (mask, colors, options) => {

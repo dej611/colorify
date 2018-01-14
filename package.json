@@ -1,20 +1,27 @@
 {
   "name": "colorify",
   "version": "0.0.1",
-  "description":
-    "Simple Javascript library to recolor images using HTML5 Canvas API",
+  "description": "Simple Javascript library to recolor images using HTML5 Canvas API",
   "main": "src/colorify.js",
   "scripts": {
+    "start": "rollup -wmc",
     "test": "ava",
     "build": "rollup -c"
   },
-  "keywords": ["html5", "canvas", "blend", "image", "js"],
+  "keywords": [
+    "html5",
+    "canvas",
+    "blend",
+    "image",
+    "js"
+  ],
   "author": "Marco Liberati <dej611@gmail.com>",
   "license": "GPL-3.0",
   "devDependencies": {
     "ava": "^0.24.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.14.0",
@@ -23,6 +30,7 @@
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-serve": "^0.4.2",
     "rollup-plugin-uglify": "^2.0.1"
   },
   "dependencies": {

@@ -50,7 +50,10 @@ const maskMaker = (image, strategy) => {
 
 const makeMasksFromImages = async (images, options) => {
   const loaded = await imageLoader(images, options);
-  return loaded.map(image => maskMaker);
+  return loaded.reduce((memo, image, index) => {
+    memo[images[index]] = maskMaker(image, options.strategy);
+    return memo;
+  }, {});
 };
 
 // Mask Maker

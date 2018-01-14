@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Single Image Recoloring</title>
   <meta charset="utf-8" />
@@ -8,6 +9,7 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
+
 <body>
   <img src="./MapMarker.png" id="image" class="img-thumbnail"></img>
   <img id="recolored" src="" class="img-thumbnail"></img>
@@ -18,31 +20,32 @@
       <label for="inputColor">Color</label>
       <input type="text" class="form-control" placeholder="red" id="inputColor">
     </div>
-    <a class="btn btn-default" href="#" role="button" id="button">Change color</a>
+    <button class="btn btn-default" href="#" role="button" id="button">Change color</button>
   </form>
 
   <!-- Code -->
-  <script src="../src/colorify.js"></script>
+  <script src="./colorify.js"></script>
   <script>
-    var painter = Colorify.create();
-    // get image
     var img = document.getElementById('image');
 
-    colorize();
-    
+    colorize('red');
+
     // now listen the button in case the user wants to change color
-    document.getElementById('button').addEventListener('click', function(){
+    document.getElementById('button').addEventListener('click', function (e) {
+      e.preventDefault();
       var colorText = document.getElementById('inputColor').value;
-      colorize(colorText);
+      colorize(colorText || "blue");
     });
 
-    function colorize(color){
+    function colorize(color) {
       // now color the image
-      painter.recolor(img.src, color || "red", {}, function (error, results){
-        // results is a PNG image encoded in Base64
-        document.getElementById('recolored').src = results[0];
-      });
+      colorify.default(img.src, color)
+        .then(function (recolored) {
+          // results is a list of PNG images encoded in Base64
+          document.getElementById('recolored').src = recolored[0];
+        });
     }
   </script>
 </body>
+
 </html>

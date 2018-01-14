@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advanced Example with Image Mask</title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <img src="./MapMarker.png" id="image" class="img-thumbnail"></img>
+    <img id="recolored" src="" class="img-thumbnail"></img>
+
+    <!-- Form -->
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="maskType">Type of strategy for mask</label>
+            <select class="form-control" id="strategy">
+                <option value="average">Average</option>
+                <option value="max">Max</option>
+                <option value="min">Min</option>
+                <option value="grayscale">Grayscale</option>
+            </select>
+        </div>
+        <button class="btn btn-default" href="#" role="button" id="button">Apply strategy</button>
+    </form>
+
+    <!-- Code -->
+    <script src="./colorify.js"></script>
+    <script>
+        var img = document.getElementById('image');
+
+
+        colorize([{ value: 0, color: 'red' }, { value: 1, color: 'blue' }]);
+
+        // now listen the button in case the user wants to change color
+        document.getElementById('button').addEventListener('click', function () {
+            var strategy = document.getElementById('strategy').value;
+            colorize(strategy);
+        });
+
+        function colorize(strategy) {
+            // now color the image
+            colorify.default(img.src, [{ value: 0, color: 'white' }, { value: 1, color: 'black' }], { strategy: strategy })
+                .then(function (recolored) {
+                    // results is a list of PNG images encoded in Base64
+                    document.getElementById('recolored').src = recolored[0];
+                });
+        }
+    </script>
+</body>
+
+</html>

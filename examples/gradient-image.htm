@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Image Recoloring with Gradient</title>
   <meta charset="utf-8" />
@@ -8,6 +9,7 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
+
 <body>
   <img src="./MapMarker.png" id="image" class="img-thumbnail"></img>
   <img id="recolored" src="" class="img-thumbnail"></img>
@@ -22,33 +24,33 @@
       <label for="inputColor">Step 1</label>
       <input type="text" class="form-control" placeholder="blue" id="step2">
     </div>
-    <a class="btn btn-default" href="#" role="button" id="button">Apply gradient</a>
+    <button class="btn btn-default" href="#" role="button" id="button">Apply gradient</button>
   </form>
 
   <!-- Code -->
-  <script src="../src/colorify.js"></script>
+  <script src="./colorify.js"></script>
   <script>
-    var painter = Colorify.create();
-    // get image
     var img = document.getElementById('image');
 
-    colorize([{value: 0, color: 'red'}, {value: 1, color: 'blue'}]);
-    
+
+    colorize([{ value: 0, color: 'red' }, { value: 1, color: 'blue' }]);
+
     // now listen the button in case the user wants to change color
-    document.getElementById('button').addEventListener('click', function(){
+    document.getElementById('button').addEventListener('click', function () {
       var step1 = document.getElementById('step1').value || 'red';
       var step2 = document.getElementById('step2').value || 'blue';
-
-      colorize([{value: 0, color: step1}, {value: 1, color: step2}]);
+      colorize([{ value: 0, color: step1 }, { value: 1, color: step2 }]);
     });
 
-    function colorize(color){
+    function colorize(color) {
       // now color the image
-      painter.recolor(img.src, color, {}, function (error, results){
-        // results is a PNG image encoded in Base64
-        document.getElementById('recolored').src = results[0];
-      });
+      colorify.default(img.src, color)
+        .then(function (recolored) {
+          // results is a list of PNG images encoded in Base64
+          document.getElementById('recolored').src = recolored[0];
+        });
     }
   </script>
 </body>
+
 </html>

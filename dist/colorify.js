@@ -1,2 +1,2990 @@
-!function(t,n){"object"==typeof exports&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):t.colorify=n()}(this,function(){"use strict";function t(t){return t&&t.__esModule&&Object.prototype.hasOwnProperty.call(t,"default")?t.default:t}function n(t,n){return t(n={exports:{}},n.exports),n.exports}var r=n(function(t){!function(n){var r,e=Object.prototype,o=e.hasOwnProperty,i="function"==typeof Symbol?Symbol:{},u=i.iterator||"@@iterator",a=i.asyncIterator||"@@asyncIterator",c=i.toStringTag||"@@toStringTag",f=n.regeneratorRuntime;if(f)t.exports=f;else{(f=n.regeneratorRuntime=t.exports).wrap=_;var s="suspendedStart",l="suspendedYield",h="executing",p="completed",v={},d={};d[u]=function(){return this};var y=Object.getPrototypeOf,g=y&&y(y(k([])));g&&g!==e&&o.call(g,u)&&(d=g);var m=E.prototype=b.prototype=Object.create(d);x.prototype=m.constructor=E,E.constructor=x,E[c]=x.displayName="GeneratorFunction",f.isGeneratorFunction=function(t){var n="function"==typeof t&&t.constructor;return!!n&&(n===x||"GeneratorFunction"===(n.displayName||n.name))},f.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,E):(t.__proto__=E,c in t||(t[c]="GeneratorFunction")),t.prototype=Object.create(m),t},f.awrap=function(t){return{__await:t}},O(S.prototype),S.prototype[a]=function(){return this},f.AsyncIterator=S,f.async=function(t,n,r,e){var o=new S(_(t,n,r,e));return f.isGeneratorFunction(n)?o:o.next().then(function(t){return t.done?t.value:o.next()})},O(m),m[c]="Generator",m[u]=function(){return this},m.toString=function(){return"[object Generator]"},f.keys=function(t){var n=[];for(var r in t)n.push(r);return n.reverse(),function r(){for(;n.length;){var e=n.pop();if(e in t)return r.value=e,r.done=!1,r}return r.done=!0,r}},f.values=k,P.prototype={constructor:P,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=r,this.done=!1,this.delegate=null,this.method="next",this.arg=r,this.tryEntries.forEach(M),!t)for(var n in this)"t"===n.charAt(0)&&o.call(this,n)&&!isNaN(+n.slice(1))&&(this[n]=r)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var n=this;function e(e,o){return a.type="throw",a.arg=t,n.next=e,o&&(n.method="next",n.arg=r),!!o}for(var i=this.tryEntries.length-1;i>=0;--i){var u=this.tryEntries[i],a=u.completion;if("root"===u.tryLoc)return e("end");if(u.tryLoc<=this.prev){var c=o.call(u,"catchLoc"),f=o.call(u,"finallyLoc");if(c&&f){if(this.prev<u.catchLoc)return e(u.catchLoc,!0);if(this.prev<u.finallyLoc)return e(u.finallyLoc)}else if(c){if(this.prev<u.catchLoc)return e(u.catchLoc,!0)}else{if(!f)throw new Error("try statement without catch or finally");if(this.prev<u.finallyLoc)return e(u.finallyLoc)}}}},abrupt:function(t,n){for(var r=this.tryEntries.length-1;r>=0;--r){var e=this.tryEntries[r];if(e.tryLoc<=this.prev&&o.call(e,"finallyLoc")&&this.prev<e.finallyLoc){var i=e;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=n&&n<=i.finallyLoc&&(i=null);var u=i?i.completion:{};return u.type=t,u.arg=n,i?(this.method="next",this.next=i.finallyLoc,v):this.complete(u)},complete:function(t,n){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&n&&(this.next=n),v},finish:function(t){for(var n=this.tryEntries.length-1;n>=0;--n){var r=this.tryEntries[n];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),M(r),v}},catch:function(t){for(var n=this.tryEntries.length-1;n>=0;--n){var r=this.tryEntries[n];if(r.tryLoc===t){var e=r.completion;if("throw"===e.type){var o=e.arg;M(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,n,e){return this.delegate={iterator:k(t),resultName:n,nextLoc:e},"next"===this.method&&(this.arg=r),v}}}function _(t,n,r,e){var o=n&&n.prototype instanceof b?n:b,i=Object.create(o.prototype),u=new P(e||[]);return i._invoke=function(t,n,r){var e=s;return function(o,i){if(e===h)throw new Error("Generator is already running");if(e===p){if("throw"===o)throw i;return T()}for(r.method=o,r.arg=i;;){var u=r.delegate;if(u){var a=j(u,r);if(a){if(a===v)continue;return a}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if(e===s)throw e=p,r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);e=h;var c=w(t,n,r);if("normal"===c.type){if(e=r.done?p:l,c.arg===v)continue;return{value:c.arg,done:r.done}}"throw"===c.type&&(e=p,r.method="throw",r.arg=c.arg)}}}(t,r,u),i}function w(t,n,r){try{return{type:"normal",arg:t.call(n,r)}}catch(t){return{type:"throw",arg:t}}}function b(){}function x(){}function E(){}function O(t){["next","throw","return"].forEach(function(n){t[n]=function(t){return this._invoke(n,t)}})}function S(t){var n;this._invoke=function(r,e){function i(){return new Promise(function(n,i){!function n(r,e,i,u){var a=w(t[r],t,e);if("throw"!==a.type){var c=a.arg,f=c.value;return f&&"object"==typeof f&&o.call(f,"__await")?Promise.resolve(f.__await).then(function(t){n("next",t,i,u)},function(t){n("throw",t,i,u)}):Promise.resolve(f).then(function(t){c.value=t,i(c)},u)}u(a.arg)}(r,e,n,i)})}return n=n?n.then(i,i):i()}}function j(t,n){var e=t.iterator[n.method];if(e===r){if(n.delegate=null,"throw"===n.method){if(t.iterator.return&&(n.method="return",n.arg=r,j(t,n),"throw"===n.method))return v;n.method="throw",n.arg=new TypeError("The iterator does not provide a 'throw' method")}return v}var o=w(e,t.iterator,n.arg);if("throw"===o.type)return n.method="throw",n.arg=o.arg,n.delegate=null,v;var i=o.arg;return i?i.done?(n[t.resultName]=i.value,n.next=t.nextLoc,"return"!==n.method&&(n.method="next",n.arg=r),n.delegate=null,v):i:(n.method="throw",n.arg=new TypeError("iterator result is not an object"),n.delegate=null,v)}function L(t){var n={tryLoc:t[0]};1 in t&&(n.catchLoc=t[1]),2 in t&&(n.finallyLoc=t[2],n.afterLoc=t[3]),this.tryEntries.push(n)}function M(t){var n=t.completion||{};n.type="normal",delete n.arg,t.completion=n}function P(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(L,this),this.reset(!0)}function k(t){if(t){var n=t[u];if(n)return n.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var e=-1,i=function n(){for(;++e<t.length;)if(o.call(t,e))return n.value=t[e],n.done=!1,n;return n.value=r,n.done=!0,n};return i.next=i}}return{next:T}}function T(){return{value:r,done:!0}}}(function(){return this}()||Function("return this")())}),e=function(){return this}()||Function("return this")(),o=e.regeneratorRuntime&&Object.getOwnPropertyNames(e).indexOf("regeneratorRuntime")>=0,i=o&&e.regeneratorRuntime;e.regeneratorRuntime=void 0;var u=r;if(o)e.regeneratorRuntime=i;else try{delete e.regeneratorRuntime}catch(t){e.regeneratorRuntime=void 0}var a=u,c=Math.ceil,f=Math.floor,s=function(t){return isNaN(t=+t)?0:(t>0?f:c)(t)},l=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t},h=n(function(t){var n=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=n)}),p=n(function(t){var n=t.exports={version:"2.5.3"};"number"==typeof __e&&(__e=n)}),v=(p.version,function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}),d=function(t,n,r){if(v(t),void 0===n)return t;switch(r){case 1:return function(r){return t.call(n,r)};case 2:return function(r,e){return t.call(n,r,e)};case 3:return function(r,e,o){return t.call(n,r,e,o)}}return function(){return t.apply(n,arguments)}},y=function(t){return"object"==typeof t?null!==t:"function"==typeof t},g=function(t){if(!y(t))throw TypeError(t+" is not an object!");return t},m=function(t){try{return!!t()}catch(t){return!0}},_=!m(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a}),w=h.document,b=y(w)&&y(w.createElement),x=function(t){return b?w.createElement(t):{}},E=!_&&!m(function(){return 7!=Object.defineProperty(x("div"),"a",{get:function(){return 7}}).a}),O=Object.defineProperty,S={f:_?Object.defineProperty:function(t,n,r){if(g(t),n=function(t,n){if(!y(t))return t;var r,e;if(n&&"function"==typeof(r=t.toString)&&!y(e=r.call(t)))return e;if("function"==typeof(r=t.valueOf)&&!y(e=r.call(t)))return e;if(!n&&"function"==typeof(r=t.toString)&&!y(e=r.call(t)))return e;throw TypeError("Can't convert object to primitive value")}(n,!0),g(r),E)try{return O(t,n,r)}catch(t){}if("get"in r||"set"in r)throw TypeError("Accessors not supported!");return"value"in r&&(t[n]=r.value),t}},j=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}},L=_?function(t,n,r){return S.f(t,n,j(1,r))}:function(t,n,r){return t[n]=r,t},M="prototype",P=function(t,n,r){var e,o,i,u=t&P.F,a=t&P.G,c=t&P.S,f=t&P.P,s=t&P.B,l=t&P.W,v=a?p:p[n]||(p[n]={}),y=v[M],g=a?h:c?h[n]:(h[n]||{})[M];a&&(r=n);for(e in r)(o=!u&&g&&void 0!==g[e])&&e in v||(i=o?g[e]:r[e],v[e]=a&&"function"!=typeof g[e]?r[e]:s&&o?d(i,h):l&&g[e]==i?function(t){var n=function(n,r,e){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,r)}return new t(n,r,e)}return t.apply(this,arguments)};return n[M]=t[M],n}(i):f&&"function"==typeof i?d(Function.call,i):i,f&&((v.virtual||(v.virtual={}))[e]=i,t&P.R&&y&&!y[e]&&L(y,e,i)))};P.F=1,P.G=2,P.S=4,P.P=8,P.B=16,P.W=32,P.U=64,P.R=128;var k,T=P,A=L,F={}.hasOwnProperty,C=function(t,n){return F.call(t,n)},R={},N={}.toString,I=function(t){return N.call(t).slice(8,-1)},G=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==I(t)?t.split(""):Object(t)},D=function(t){return G(l(t))},W=Math.min,z=function(t){return t>0?W(s(t),9007199254740991):0},K=Math.max,V=Math.min,B="__core-js_shared__",H=h[B]||(h[B]={}),U=function(t){return H[t]||(H[t]={})},Y=0,q=Math.random(),J=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++Y+q).toString(36))},Q=U("keys"),X=function(t){return Q[t]||(Q[t]=J(t))},Z=(k=!1,function(t,n,r){var e,o,i,u=D(t),a=z(u.length),c=(e=r,o=a,(e=s(e))<0?K(e+o,0):V(e,o));if(k&&n!=n){for(;a>c;)if((i=u[c++])!=i)return!0}else for(;a>c;c++)if((k||c in u)&&u[c]===n)return k||c||0;return!k&&-1}),$=X("IE_PROTO"),tt="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(","),nt=Object.keys||function(t){return function(t,n){var r,e=D(t),o=0,i=[];for(r in e)r!=$&&C(e,r)&&i.push(r);for(;n.length>o;)C(e,r=n[o++])&&(~Z(i,r)||i.push(r));return i}(t,tt)},rt=_?Object.defineProperties:function(t,n){g(t);for(var r,e=nt(n),o=e.length,i=0;o>i;)S.f(t,r=e[i++],n[r]);return t},et=h.document,ot=et&&et.documentElement,it=X("IE_PROTO"),ut=function(){},at="prototype",ct=function(){var t,n=x("iframe"),r=tt.length;for(n.style.display="none",ot.appendChild(n),n.src="javascript:",(t=n.contentWindow.document).open(),t.write("<script>document.F=Object<\/script>"),t.close(),ct=t.F;r--;)delete ct[at][tt[r]];return ct()},ft=Object.create||function(t,n){var r;return null!==t?(ut[at]=g(t),r=new ut,ut[at]=null,r[it]=t):r=ct(),void 0===n?r:rt(r,n)},st=n(function(t){var n=U("wks"),r=h.Symbol,e="function"==typeof r;(t.exports=function(t){return n[t]||(n[t]=e&&r[t]||(e?r:J)("Symbol."+t))}).store=n}),lt=S.f,ht=st("toStringTag"),pt=function(t,n,r){t&&!C(t=r?t:t.prototype,ht)&&lt(t,ht,{configurable:!0,value:n})},vt={};L(vt,st("iterator"),function(){return this});var dt,yt=function(t){return Object(l(t))},gt=X("IE_PROTO"),mt=Object.prototype,_t=Object.getPrototypeOf||function(t){return t=yt(t),C(t,gt)?t[gt]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?mt:null},wt=st("iterator"),bt=!([].keys&&"next"in[].keys()),xt="values",Et=function(){return this},Ot=function(t,n,r,e,o,i,u){c=n,f=e,(a=r).prototype=ft(vt,{next:j(1,f)}),pt(a,c+" Iterator");var a,c,f,s,l,h,p=function(t){if(!bt&&t in g)return g[t];switch(t){case"keys":case xt:return function(){return new r(this,t)}}return function(){return new r(this,t)}},v=n+" Iterator",d=o==xt,y=!1,g=t.prototype,m=g[wt]||g["@@iterator"]||o&&g[o],_=!bt&&m||p(o),w=o?d?p("entries"):_:void 0,b="Array"==n?g.entries||m:m;if(b&&(h=_t(b.call(new t)))!==Object.prototype&&h.next&&pt(h,v,!0),d&&m&&m.name!==xt&&(y=!0,_=function(){return m.call(this)}),u&&(bt||y||!g[wt])&&L(g,wt,_),R[n]=_,R[v]=Et,o)if(s={values:d?_:p(xt),keys:i?_:p("keys"),entries:w},u)for(l in s)l in g||A(g,l,s[l]);else T(T.P+T.F*(bt||y),n,s);return s},St=(dt=!0,function(t,n){var r,e,o=String(l(t)),i=s(n),u=o.length;return i<0||i>=u?dt?"":void 0:(r=o.charCodeAt(i))<55296||r>56319||i+1===u||(e=o.charCodeAt(i+1))<56320||e>57343?dt?o.charAt(i):r:dt?o.slice(i,i+2):e-56320+(r-55296<<10)+65536});Ot(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,r=this._i;return r>=n.length?{value:void 0,done:!0}:(t=St(n,r),this._i+=t.length,{value:t,done:!1})});var jt=function(t,n){return{value:n,done:!!t}};Ot(Array,"Array",function(t,n){this._t=D(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,r=this._i++;return!t||r>=t.length?(this._t=void 0,jt(1)):jt(0,"keys"==n?r:"values"==n?t[r]:[r,t[r]])},"values");R.Arguments=R.Array;for(var Lt=st("toStringTag"),Mt="CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,TextTrackList,TouchList".split(","),Pt=0;Pt<Mt.length;Pt++){var kt=Mt[Pt],Tt=h[kt],At=Tt&&Tt.prototype;At&&!At[Lt]&&L(At,Lt,kt),R[kt]=R.Array}var Ft=function(t,n,r){for(var e in n)r&&t[e]?t[e]=n[e]:L(t,e,n[e]);return t},Ct=function(t,n,r,e){if(!(t instanceof n)||void 0!==e&&e in t)throw TypeError(r+": incorrect invocation!");return t},Rt=function(t,n,r,e){try{return e?n(g(r)[0],r[1]):n(r)}catch(n){var o=t.return;throw void 0!==o&&g(o.call(t)),n}},Nt=st("iterator"),It=Array.prototype,Gt=st("toStringTag"),Dt="Arguments"==I(function(){return arguments}()),Wt=function(t){var n,r,e;return void 0===t?"Undefined":null===t?"Null":"string"==typeof(r=function(t,n){try{return t[n]}catch(t){}}(n=Object(t),Gt))?r:Dt?I(n):"Object"==(e=I(n))&&"function"==typeof n.callee?"Arguments":e},zt=st("iterator"),Kt=p.getIteratorMethod=function(t){if(void 0!=t)return t[zt]||t["@@iterator"]||R[Wt(t)]},Vt=n(function(t){var n={},r={},e=t.exports=function(t,e,o,i,u){var a,c,f,s,l=u?function(){return t}:Kt(t),h=d(o,i,e?2:1),p=0;if("function"!=typeof l)throw TypeError(t+" is not iterable!");if(void 0===(v=l)||R.Array!==v&&It[Nt]!==v){for(f=l.call(t);!(c=f.next()).done;)if((s=Rt(f,h,c.value,e))===n||s===r)return s}else for(a=z(t.length);a>p;p++)if((s=e?h(g(c=t[p])[0],c[1]):h(t[p]))===n||s===r)return s;var v};e.BREAK=n,e.RETURN=r}),Bt=st("species"),Ht=function(t){var n="function"==typeof p[t]?p[t]:h[t];_&&n&&!n[Bt]&&S.f(n,Bt,{configurable:!0,get:function(){return this}})},Ut=n(function(t){var n=J("meta"),r=S.f,e=0,o=Object.isExtensible||function(){return!0},i=!m(function(){return o(Object.preventExtensions({}))}),u=function(t){r(t,n,{value:{i:"O"+ ++e,w:{}}})},a=t.exports={KEY:n,NEED:!1,fastKey:function(t,r){if(!y(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!C(t,n)){if(!o(t))return"F";if(!r)return"E";u(t)}return t[n].i},getWeak:function(t,r){if(!C(t,n)){if(!o(t))return!0;if(!r)return!1;u(t)}return t[n].w},onFreeze:function(t){return i&&a.NEED&&o(t)&&!C(t,n)&&u(t),t}}}),Yt=(Ut.KEY,Ut.NEED,Ut.fastKey,Ut.getWeak,Ut.onFreeze,function(t,n){if(!y(t)||t._t!==n)throw TypeError("Incompatible receiver, "+n+" required!");return t}),qt=S.f,Jt=Ut.fastKey,Qt=_?"_s":"size",Xt=function(t,n){var r,e=Jt(n);if("F"!==e)return t._i[e];for(r=t._f;r;r=r.n)if(r.k==n)return r},Zt={getConstructor:function(t,n,r,e){var o=t(function(t,i){Ct(t,o,n,"_i"),t._t=n,t._i=ft(null),t._f=void 0,t._l=void 0,t[Qt]=0,void 0!=i&&Vt(i,r,t[e],t)});return Ft(o.prototype,{clear:function(){for(var t=Yt(this,n),r=t._i,e=t._f;e;e=e.n)e.r=!0,e.p&&(e.p=e.p.n=void 0),delete r[e.i];t._f=t._l=void 0,t[Qt]=0},delete:function(t){var r=Yt(this,n),e=Xt(r,t);if(e){var o=e.n,i=e.p;delete r._i[e.i],e.r=!0,i&&(i.n=o),o&&(o.p=i),r._f==e&&(r._f=o),r._l==e&&(r._l=i),r[Qt]--}return!!e},forEach:function(t){Yt(this,n);for(var r,e=d(t,arguments.length>1?arguments[1]:void 0,3);r=r?r.n:this._f;)for(e(r.v,r.k,this);r&&r.r;)r=r.p},has:function(t){return!!Xt(Yt(this,n),t)}}),_&&qt(o.prototype,"size",{get:function(){return Yt(this,n)[Qt]}}),o},def:function(t,n,r){var e,o,i=Xt(t,n);return i?i.v=r:(t._l=i={i:o=Jt(n,!0),k:n,v:r,p:e=t._l,n:void 0,r:!1},t._f||(t._f=i),e&&(e.n=i),t[Qt]++,"F"!==o&&(t._i[o]=i)),t},getEntry:Xt,setStrong:function(t,n,r){Ot(t,n,function(t,r){this._t=Yt(t,n),this._k=r,this._l=void 0},function(){for(var t=this._k,n=this._l;n&&n.r;)n=n.p;return this._t&&(this._l=n=n?n.n:this._t._f)?jt(0,"keys"==t?n.k:"values"==t?n.v:[n.k,n.v]):(this._t=void 0,jt(1))},r?"entries":"values",!r,!0),Ht(n)}},$t=Array.isArray||function(t){return"Array"==I(t)},tn=st("species"),nn=function(t,n){return new(function(t){var n;return $t(t)&&("function"!=typeof(n=t.constructor)||n!==Array&&!$t(n.prototype)||(n=void 0),y(n)&&null===(n=n[tn])&&(n=void 0)),void 0===n?Array:n}(t))(n)},rn=S.f,en=function(t,n){var r=1==t,e=2==t,o=3==t,i=4==t,u=6==t,a=5==t||u,c=n||nn;return function(n,f,s){for(var l,h,p=yt(n),v=G(p),y=d(f,s,3),g=z(v.length),m=0,_=r?c(n,g):e?c(n,0):void 0;g>m;m++)if((a||m in v)&&(h=y(l=v[m],m,p),t))if(r)_[m]=h;else if(h)switch(t){case 3:return!0;case 5:return l;case 6:return m;case 2:_.push(l)}else if(i)return!1;return u?-1:o||i?i:_}}(0);!function(t,n,r,e,o,i){var u=h[t],a=u,c=o?"set":"add",f=a&&a.prototype,s={};_&&"function"==typeof a&&(i||f.forEach&&!m(function(){(new a).entries().next()}))?(a=n(function(n,r){Ct(n,a,t,"_c"),n._c=new u,void 0!=r&&Vt(r,o,n[c],n)}),en("add,clear,delete,forEach,get,has,set,keys,values,entries,toJSON".split(","),function(t){var n="add"==t||"set"==t;t in f&&(!i||"clear"!=t)&&L(a.prototype,t,function(r,e){if(Ct(this,a,t),!n&&i&&!y(r))return"get"==t&&void 0;var o=this._c[t](0===r?0:r,e);return n?this:o})}),i||rn(a.prototype,"size",{get:function(){return this._c.size}})):(a=e.getConstructor(n,t,o,c),Ft(a.prototype,r),Ut.NEED=!0),pt(a,t),s[t]=a,T(T.G+T.W+T.F,s),i||e.setStrong(a,t,o)}("Map",function(t){return function(){return t(this,arguments.length>0?arguments[0]:void 0)}},{get:function(t){var n=Zt.getEntry(Yt(this,"Map"),t);return n&&n.v},set:function(t,n){return Zt.def(Yt(this,"Map"),0===t?0:t,n)}},Zt,!0);T(T.P+T.R,"Map",{toJSON:(on="Map",function(){if(Wt(this)!=on)throw TypeError(on+"#toJSON isn't generic");return function(t,n){var r=[];return Vt(t,!1,r.push,r,n),r}(this)})});var on;un="Map",T(T.S,un,{of:function(){for(var t=arguments.length,n=new Array(t);t--;)n[t]=arguments[t];return new this(n)}});var un;an="Map",T(T.S,an,{from:function(t){var n,r,e,o,i=arguments[1];return v(this),(n=void 0!==i)&&v(i),void 0==t?new this:(r=[],n?(e=0,o=d(i,arguments[2],2),Vt(t,!1,function(t){r.push(o(t,e++))})):Vt(t,!1,r.push,r),new this(r))}});var an,cn,fn,sn,ln=p.Map,hn=t(n(function(t){t.exports={default:ln,__esModule:!0}})),pn=st("species"),vn=function(t,n){var r,e=g(t).constructor;return void 0===e||void 0==(r=g(e)[pn])?n:v(r)},dn=h.process,yn=h.setImmediate,gn=h.clearImmediate,mn=h.MessageChannel,_n=h.Dispatch,wn=0,bn={},xn="onreadystatechange",En=function(){var t=+this;if(bn.hasOwnProperty(t)){var n=bn[t];delete bn[t],n()}},On=function(t){En.call(t.data)};yn&&gn||(yn=function(t){for(var n=[],r=1;arguments.length>r;)n.push(arguments[r++]);return bn[++wn]=function(){!function(t,n,r){var e=void 0===r;switch(n.length){case 0:return e?t():t.call(r);case 1:return e?t(n[0]):t.call(r,n[0]);case 2:return e?t(n[0],n[1]):t.call(r,n[0],n[1]);case 3:return e?t(n[0],n[1],n[2]):t.call(r,n[0],n[1],n[2]);case 4:return e?t(n[0],n[1],n[2],n[3]):t.call(r,n[0],n[1],n[2],n[3])}t.apply(r,n)}("function"==typeof t?t:Function(t),n)},cn(wn),wn},gn=function(t){delete bn[t]},"process"==I(dn)?cn=function(t){dn.nextTick(d(En,t,1))}:_n&&_n.now?cn=function(t){_n.now(d(En,t,1))}:mn?(sn=(fn=new mn).port2,fn.port1.onmessage=On,cn=d(sn.postMessage,sn,1)):h.addEventListener&&"function"==typeof postMessage&&!h.importScripts?(cn=function(t){h.postMessage(t+"","*")},h.addEventListener("message",On,!1)):cn=xn in x("script")?function(t){ot.appendChild(x("script"))[xn]=function(){ot.removeChild(this),En.call(t)}}:function(t){setTimeout(d(En,t,1),0)});var Sn={set:yn,clear:gn},jn=Sn.set,Ln=h.MutationObserver||h.WebKitMutationObserver,Mn=h.process,Pn=h.Promise,kn="process"==I(Mn);var Tn={f:function(t){return new function(t){var n,r;this.promise=new t(function(t,e){if(void 0!==n||void 0!==r)throw TypeError("Bad Promise constructor");n=t,r=e}),this.resolve=v(n),this.reject=v(r)}(t)}},An=function(t){try{return{e:!1,v:t()}}catch(t){return{e:!0,v:t}}},Fn=function(t,n){if(g(t),y(n)&&n.constructor===t)return n;var r=Tn.f(t);return(0,r.resolve)(n),r.promise},Cn=st("iterator"),Rn=!1;try{[7][Cn]().return=function(){Rn=!0}}catch(t){}var Nn,In,Gn,Dn,Wn=Sn.set,zn=function(){var t,n,r,e=function(){var e,o;for(kn&&(e=Mn.domain)&&e.exit();t;){o=t.fn,t=t.next;try{o()}catch(e){throw t?r():n=void 0,e}}n=void 0,e&&e.enter()};if(kn)r=function(){Mn.nextTick(e)};else if(!Ln||h.navigator&&h.navigator.standalone)if(Pn&&Pn.resolve){var o=Pn.resolve();r=function(){o.then(e)}}else r=function(){jn.call(h,e)};else{var i=!0,u=document.createTextNode("");new Ln(e).observe(u,{characterData:!0}),r=function(){u.data=i=!i}}return function(e){var o={fn:e,next:void 0};n&&(n.next=o),t||(t=o,r()),n=o}}(),Kn="Promise",Vn=h.TypeError,Bn=h.process,Hn=h[Kn],Un="process"==Wt(Bn),Yn=function(){},qn=In=Tn.f,Jn=!!function(){try{var t=Hn.resolve(1),n=(t.constructor={})[st("species")]=function(t){t(Yn,Yn)};return(Un||"function"==typeof PromiseRejectionEvent)&&t.then(Yn)instanceof n}catch(t){}}(),Qn=function(t){var n;return!(!y(t)||"function"!=typeof(n=t.then))&&n},Xn=function(t,n){if(!t._n){t._n=!0;var r=t._c;zn(function(){for(var e=t._v,o=1==t._s,i=0,u=function(n){var r,i,u=o?n.ok:n.fail,a=n.resolve,c=n.reject,f=n.domain;try{u?(o||(2==t._h&&tr(t),t._h=1),!0===u?r=e:(f&&f.enter(),r=u(e),f&&f.exit()),r===n.promise?c(Vn("Promise-chain cycle")):(i=Qn(r))?i.call(r,a,c):a(r)):c(e)}catch(t){c(t)}};r.length>i;)u(r[i++]);t._c=[],t._n=!1,n&&!t._h&&Zn(t)})}},Zn=function(t){Wn.call(h,function(){var n,r,e,o=t._v,i=$n(t);if(i&&(n=An(function(){Un?Bn.emit("unhandledRejection",o,t):(r=h.onunhandledrejection)?r({promise:t,reason:o}):(e=h.console)&&e.error&&e.error("Unhandled promise rejection",o)}),t._h=Un||$n(t)?2:1),t._a=void 0,i&&n.e)throw n.v})},$n=function(t){return 1!==t._h&&0===(t._a||t._c).length},tr=function(t){Wn.call(h,function(){var n;Un?Bn.emit("rejectionHandled",t):(n=h.onrejectionhandled)&&n({promise:t,reason:t._v})})},nr=function(t){var n=this;n._d||(n._d=!0,(n=n._w||n)._v=t,n._s=2,n._a||(n._a=n._c.slice()),Xn(n,!0))},rr=function(t){var n,r=this;if(!r._d){r._d=!0,r=r._w||r;try{if(r===t)throw Vn("Promise can't be resolved itself");(n=Qn(t))?zn(function(){var e={_w:r,_d:!1};try{n.call(t,d(rr,e,1),d(nr,e,1))}catch(t){nr.call(e,t)}}):(r._v=t,r._s=1,Xn(r,!1))}catch(t){nr.call({_w:r,_d:!1},t)}}};Jn||(Hn=function(t){Ct(this,Hn,Kn,"_h"),v(t),Nn.call(this);try{t(d(rr,this,1),d(nr,this,1))}catch(t){nr.call(this,t)}},(Nn=function(t){this._c=[],this._a=void 0,this._s=0,this._d=!1,this._v=void 0,this._h=0,this._n=!1}).prototype=Ft(Hn.prototype,{then:function(t,n){var r=qn(vn(this,Hn));return r.ok="function"!=typeof t||t,r.fail="function"==typeof n&&n,r.domain=Un?Bn.domain:void 0,this._c.push(r),this._a&&this._a.push(r),this._s&&Xn(this,!1),r.promise},catch:function(t){return this.then(void 0,t)}}),Gn=function(){var t=new Nn;this.promise=t,this.resolve=d(rr,t,1),this.reject=d(nr,t,1)},Tn.f=qn=function(t){return t===Hn||t===Dn?new Gn(t):In(t)}),T(T.G+T.W+T.F*!Jn,{Promise:Hn}),pt(Hn,Kn),Ht(Kn),Dn=p[Kn],T(T.S+T.F*!Jn,Kn,{reject:function(t){var n=qn(this);return(0,n.reject)(t),n.promise}}),T(T.S+!0*T.F,Kn,{resolve:function(t){return Fn(this===Dn?Hn:this,t)}}),T(T.S+T.F*!(Jn&&function(t,n){if(!n&&!Rn)return!1;var r=!1;try{var e=[7],o=e[Cn]();o.next=function(){return{done:r=!0}},e[Cn]=function(){return o},t(e)}catch(t){}return r}(function(t){Hn.all(t).catch(Yn)})),Kn,{all:function(t){var n=this,r=qn(n),e=r.resolve,o=r.reject,i=An(function(){var r=[],i=0,u=1;Vt(t,!1,function(t){var a=i++,c=!1;r.push(void 0),u++,n.resolve(t).then(function(t){c||(c=!0,r[a]=t,--u||e(r))},o)}),--u||e(r)});return i.e&&o(i.v),r.promise},race:function(t){var n=this,r=qn(n),e=r.reject,o=An(function(){Vt(t,!1,function(t){n.resolve(t).then(r.resolve,e)})});return o.e&&e(o.v),r.promise}}),T(T.P+T.R,"Promise",{finally:function(t){var n=vn(this,p.Promise||h.Promise),r="function"==typeof t;return this.then(r?function(r){return Fn(n,t()).then(function(){return r})}:t,r?function(r){return Fn(n,t()).then(function(){throw r})}:t)}}),T(T.S,"Promise",{try:function(t){var n=Tn.f(this),r=An(t);return(r.e?n.reject:n.resolve)(r.v),n.promise}});var er=p.Promise,or=n(function(t){t.exports={default:er,__esModule:!0}}),ir=t(or),ur=t(n(function(t,n){n.__esModule=!0;var r,e=(r=or,r&&r.__esModule?r:{default:r});n.default=function(t){return function(){var n=t.apply(this,arguments);return new e.default(function(t,r){return function o(i,u){try{var a=n[i](u),c=a.value}catch(t){return void r(t)}if(!a.done)return e.default.resolve(c).then(function(t){o("next",t)},function(t){o("throw",t)});t(c)}("next")})}}})),ar=function(t){return null!=t},cr=function(t){return"string"==typeof t},fr=function(t){return"function"==typeof t},sr=function(t){return Array.isArray(t)?t:[t]},lr=function(t){return Array.isArray(t)&&!cr(t[0])&&"value"in t[0]},hr=function(t,n){var r=document.createElement("canvas");return r.width=t,r.height=n,r},pr=function(){var t=hr(1,1).getContext("2d");return t.globalCompositeOperation="screen","screen"===t.globalCompositeOperation}(),vr=function(t,n){return new ir(function(r){return ir.race([function(t,n){var r=document.createElement("img");r.onload=r.onerror=n,r.src=t}(t,r),(e=n,new ir(function(t){return setTimeout(t,e)}))]);var e})},dr=function(t,n){var r=t.map(function(t){return vr(t,n.timeout)});return ir.all(r)},yr={f:Object.getOwnPropertySymbols},gr={f:{}.propertyIsEnumerable},mr=Object.assign,_r=!mr||m(function(){var t={},n={},r=Symbol(),e="abcdefghijklmnopqrst";return t[r]=7,e.split("").forEach(function(t){n[t]=t}),7!=mr({},t)[r]||Object.keys(mr({},n)).join("")!=e})?function(t,n){for(var r=yt(t),e=arguments.length,o=1,i=yr.f,u=gr.f;e>o;)for(var a,c=G(arguments[o++]),f=i?nt(c).concat(i(c)):nt(c),s=f.length,l=0;s>l;)u.call(c,a=f[l++])&&(r[a]=c[a]);return r}:mr;T(T.S+T.F,"Object",{assign:_r});var wr=p.Object.assign,br=t(n(function(t){t.exports={default:wr,__esModule:!0}}));!function(t,n){var r=(p.Object||{})[t]||Object[t],e={};e[t]=n(r),T(T.S+T.F*m(function(){r(1)}),"Object",e)}("keys",function(){return function(t){return nt(yt(t))}});var xr=p.Object.keys,Er=t(n(function(t){t.exports={default:xr,__esModule:!0}})),Or=function(t,n,r,e){return Er(n).reduce(function(o,i){return o[i]=r(t[i])?e(t[i]):n[i],o},{})},Sr=function(t){return!!t},jr=function(t){return t},Lr=function(t,n){var r=Or(t,n.booleans,ar,Sr),e=Or(t,n.strings,cr,jr),o=Or(t,n.functions,fr,jr);return br({},r,e,o,t)},Mr=function(t,n){var r=t.strategy;ar(r);return cr(r)&&r in n?n[r]:r,fr(r)?r:n.average},Pr={average:function(t,n,r){return Math.floor((t+n+r)/3)},grayscale:function(t,n,r){return Math.floor(.2125*t+.7154*n+.0721*r)},max:Math.max,min:Math.min},kr=function(t,n){var r=hr(t.width,t.height),e=r.getContext("2d");e.drawImage(t,0,0);for(var o=e.getImageData(0,0,r.width,r.height),i=o.data,u=0,a=0;a<i.length;a+=4)i[a+3]&&(i[a]=i[a+1]=i[a+2]=n(i[a],i[1],i[2]),u=Math.max(u,i[a]));for(var c=255-u,f=0;f<i.length;f+=4)if(i[f+3]){var s=i[f];i[f]=i[f+1]=i[f+2]=s+c}return e.putImageData(o,0,0),r},Tr=function(){var t=ur(a.mark(function t(n,r){var e;return a.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,dr(n,r);case 2:return e=t.sent,t.abrupt("return",e.map(function(t){return kr}));case 4:case"end":return t.stop()}},t,void 0)}));return function(n,r){return t.apply(this,arguments)}}(),Ar=function(){var t=ur(a.mark(function t(n,r){var e,o;return a.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return n=sr(n),(e=Lr(r,{booleans:{},strings:{},functions:{}})).strategy=Mr(e,Pr),t.next=6,Tr(n,e);case 6:return o=t.sent,t.abrupt("return",n.map(function(t){return o[t]}));case 8:case"end":return t.stop()}},t,void 0)}));return function(n,r){return t.apply(this,arguments)}}(),Fr=function(t,n,r,e){var o=void 0;lr(n)?(o=t.createLinearGradient(r/2,0,r/2,e),n.forEach(function(t){o.addColorStop(t.value,t.color)})):o=n,t.fillStyle=o,t.fillRect(0,0,r,e)},Cr=function(t,n,r){var e=t.width,o=t.height;n.forEach(function(n,i){var u=n.getContext("2d");Fr(u,e,o,r[i]),u.globalCompositeOperation="multiply",u.drawImage(t,0,0),u.globalCompositeOperation="destination-atop",u.drawImage(t,0,0)})},Rr=function(t,n,r){var e=t.width,o=t.height,i=t.getContext("2d").getImageData(0,0,e,o).data,u=[],a=[];n.forEach(function(t,n){var i=t.getContext("2d");Fr(i,e,o,r[n]);var c=i.getImageData(0,0,e,o);u.push(i),a.push(c)});for(var c=function(t){i[t+3]&&a.forEach(function(n){var r,e;(r=i[t]/255,e=i[t+3],function(t,n){t[n]=Math.floor(r*t[n]),t[n+1]=Math.floor(r*t[n+1]),t[n+2]=Math.floor(r*t[n+2]),t[n+3]=e})(n.data,t)})},f=0;f<i.length;f+=4)c(f);u.forEach(function(t,n){t.putImageData(i[n],0,0)})},Nr=function(t,n,r){return r=Lr(r,{booleans:{},strings:{},functions:{}}),function(t,n){var r=t.width,e=t.height,o=n.map(function(){return hr(r,e)});return(pr?Cr:Rr)(t,o,n),o.map(function(t){return t.toDataURL()})}(t,n=lr(n)?[n]:sr(n))},Ir=function(){var t=ur(a.mark(function t(n,r){var e,o,i;return a.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return e=n.map(function(t){return t.url}),t.next=3,dr(e);case 3:return o=t.sent,t.next=6,Ar(o,r);case 6:return i=t.sent,t.abrupt("return",Nr(i,r));case 8:case"end":return t.stop()}},t,void 0)}));return function(n,r){return t.apply(this,arguments)}}();return function(){var t=ur(a.mark(function t(n,r,e){var o,i;return a.wrap(function(t){for(;;)switch(t.prev=t.next){case 0:return n=sr(n),r=lr(u=r)?[u]:sr(u),t.next=4,Ar(n,e);case 4:return o=t.sent,i=o.reduce(function(t,o,i){var u=n[i];return t.has(u)||t.set(u,Ir(o,r,e)),t},new hn),t.abrupt("return",n.map(i.get));case 7:case"end":return t.stop()}var u},t,void 0)}));return function(n,r,e){return t.apply(this,arguments)}}()});
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+	typeof define === 'function' && define.amd ? define(['exports'], factory) :
+	(factory((global.colorify = {})));
+}(this, (function (exports) { 'use strict';
+
+function unwrapExports (x) {
+	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
+}
+
+function createCommonjsModule(fn, module) {
+	return module = { exports: {} }, fn(module, module.exports), module.exports;
+}
+
+var runtime = createCommonjsModule(function (module) {
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+!(function(global) {
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  var inModule = 'object' === "object";
+  var runtime = global.regeneratorRuntime;
+  if (runtime) {
+    if (inModule) {
+      // If regeneratorRuntime is defined globally and we're in a module,
+      // make the exports object identical to regeneratorRuntime.
+      module.exports = runtime;
+    }
+    // Don't bother evaluating the rest of this file if the runtime was
+    // already defined globally.
+    return;
+  }
+
+  // Define the runtime globally (as expected by generated code) as either
+  // module.exports (if we're in a module) or a new, empty object.
+  runtime = global.regeneratorRuntime = inModule ? module.exports : {};
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  runtime.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunctionPrototype[toStringTagSymbol] =
+    GeneratorFunction.displayName = "GeneratorFunction";
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      prototype[method] = function(arg) {
+        return this._invoke(method, arg);
+      };
+    });
+  }
+
+  runtime.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  runtime.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      if (!(toStringTagSymbol in genFun)) {
+        genFun[toStringTagSymbol] = "GeneratorFunction";
+      }
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  runtime.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return Promise.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return Promise.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration. If the Promise is rejected, however, the
+          // result for this iteration will be rejected with the same
+          // reason. Note that rejections of yielded Promises are not
+          // thrown back into the generator function, as is the case
+          // when an awaited Promise is rejected. This difference in
+          // behavior between yield and await is important, because it
+          // allows the consumer to decide what to do with the yielded
+          // rejection (swallow it and continue, manually .throw it back
+          // into the generator, abandon iteration, whatever). With
+          // await, by contrast, there is no opportunity to examine the
+          // rejection reason outside the generator function, so the
+          // only option is to throw it from the await expression, and
+          // let the generator function handle the exception.
+          result.value = unwrapped;
+          resolve(result);
+        }, reject);
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new Promise(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  runtime.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  runtime.async = function(innerFn, outerFn, self, tryLocsList) {
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList)
+    );
+
+    return runtime.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        if (delegate.iterator.return) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  Gp[toStringTagSymbol] = "Generator";
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  runtime.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  runtime.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+})(
+  // In sloppy mode, unbound `this` refers to the global object, fallback to
+  // Function constructor if we're in global strict mode. That is sadly a form
+  // of indirect eval which violates Content Security Policy.
+  (function() { return this })() || Function("return this")()
+);
+});
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+// This method of obtaining a reference to the global object needs to be
+// kept identical to the way it is obtained in runtime.js
+var g = (function() { return this })() || Function("return this")();
+
+// Use `getOwnPropertyNames` because not all browsers support calling
+// `hasOwnProperty` on the global `self` object in a worker. See #183.
+var hadRuntime = g.regeneratorRuntime &&
+  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
+
+// Save the old regeneratorRuntime in case it needs to be restored later.
+var oldRuntime = hadRuntime && g.regeneratorRuntime;
+
+// Force reevalutation of runtime.js.
+g.regeneratorRuntime = undefined;
+
+var runtimeModule = runtime;
+
+if (hadRuntime) {
+  // Restore the original runtime.
+  g.regeneratorRuntime = oldRuntime;
+} else {
+  // Remove the global property added by runtime.js.
+  try {
+    delete g.regeneratorRuntime;
+  } catch(e) {
+    g.regeneratorRuntime = undefined;
+  }
+}
+
+var regenerator = runtimeModule;
+
+// 7.1.4 ToInteger
+var ceil = Math.ceil;
+var floor = Math.floor;
+var _toInteger = function (it) {
+  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+};
+
+// 7.2.1 RequireObjectCoercible(argument)
+var _defined = function (it) {
+  if (it == undefined) throw TypeError("Can't call method on  " + it);
+  return it;
+};
+
+// true  -> String#at
+// false -> String#codePointAt
+var _stringAt = function (TO_STRING) {
+  return function (that, pos) {
+    var s = String(_defined(that));
+    var i = _toInteger(pos);
+    var l = s.length;
+    var a, b;
+    if (i < 0 || i >= l) return TO_STRING ? '' : undefined;
+    a = s.charCodeAt(i);
+    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
+      ? TO_STRING ? s.charAt(i) : a
+      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
+  };
+};
+
+var _library = true;
+
+var _global = createCommonjsModule(function (module) {
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != 'undefined' && window.Math == Math
+  ? window : typeof self != 'undefined' && self.Math == Math ? self
+  // eslint-disable-next-line no-new-func
+  : Function('return this')();
+if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
+});
+
+var _core = createCommonjsModule(function (module) {
+var core = module.exports = { version: '2.5.3' };
+if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+});
+
+var _core_1 = _core.version;
+
+var _aFunction = function (it) {
+  if (typeof it != 'function') throw TypeError(it + ' is not a function!');
+  return it;
+};
+
+// optional / simple context binding
+
+var _ctx = function (fn, that, length) {
+  _aFunction(fn);
+  if (that === undefined) return fn;
+  switch (length) {
+    case 1: return function (a) {
+      return fn.call(that, a);
+    };
+    case 2: return function (a, b) {
+      return fn.call(that, a, b);
+    };
+    case 3: return function (a, b, c) {
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function (/* ...args */) {
+    return fn.apply(that, arguments);
+  };
+};
+
+var _isObject = function (it) {
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+
+var _anObject = function (it) {
+  if (!_isObject(it)) throw TypeError(it + ' is not an object!');
+  return it;
+};
+
+var _fails = function (exec) {
+  try {
+    return !!exec();
+  } catch (e) {
+    return true;
+  }
+};
+
+// Thank's IE8 for his funny defineProperty
+var _descriptors = !_fails(function () {
+  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
+});
+
+var document$1 = _global.document;
+// typeof document.createElement is 'object' in old IE
+var is = _isObject(document$1) && _isObject(document$1.createElement);
+var _domCreate = function (it) {
+  return is ? document$1.createElement(it) : {};
+};
+
+var _ie8DomDefine = !_descriptors && !_fails(function () {
+  return Object.defineProperty(_domCreate('div'), 'a', { get: function () { return 7; } }).a != 7;
+});
+
+// 7.1.1 ToPrimitive(input [, PreferredType])
+
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+// and the second argument - flag - preferred type is a string
+var _toPrimitive = function (it, S) {
+  if (!_isObject(it)) return it;
+  var fn, val;
+  if (S && typeof (fn = it.toString) == 'function' && !_isObject(val = fn.call(it))) return val;
+  if (typeof (fn = it.valueOf) == 'function' && !_isObject(val = fn.call(it))) return val;
+  if (!S && typeof (fn = it.toString) == 'function' && !_isObject(val = fn.call(it))) return val;
+  throw TypeError("Can't convert object to primitive value");
+};
+
+var dP = Object.defineProperty;
+
+var f = _descriptors ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+  _anObject(O);
+  P = _toPrimitive(P, true);
+  _anObject(Attributes);
+  if (_ie8DomDefine) try {
+    return dP(O, P, Attributes);
+  } catch (e) { /* empty */ }
+  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
+  if ('value' in Attributes) O[P] = Attributes.value;
+  return O;
+};
+
+var _objectDp = {
+	f: f
+};
+
+var _propertyDesc = function (bitmap, value) {
+  return {
+    enumerable: !(bitmap & 1),
+    configurable: !(bitmap & 2),
+    writable: !(bitmap & 4),
+    value: value
+  };
+};
+
+var _hide = _descriptors ? function (object, key, value) {
+  return _objectDp.f(object, key, _propertyDesc(1, value));
+} : function (object, key, value) {
+  object[key] = value;
+  return object;
+};
+
+var PROTOTYPE = 'prototype';
+
+var $export = function (type, name, source) {
+  var IS_FORCED = type & $export.F;
+  var IS_GLOBAL = type & $export.G;
+  var IS_STATIC = type & $export.S;
+  var IS_PROTO = type & $export.P;
+  var IS_BIND = type & $export.B;
+  var IS_WRAP = type & $export.W;
+  var exports = IS_GLOBAL ? _core : _core[name] || (_core[name] = {});
+  var expProto = exports[PROTOTYPE];
+  var target = IS_GLOBAL ? _global : IS_STATIC ? _global[name] : (_global[name] || {})[PROTOTYPE];
+  var key, own, out;
+  if (IS_GLOBAL) source = name;
+  for (key in source) {
+    // contains in native
+    own = !IS_FORCED && target && target[key] !== undefined;
+    if (own && key in exports) continue;
+    // export native or passed
+    out = own ? target[key] : source[key];
+    // prevent global pollution for namespaces
+    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
+    // bind timers to global for call from export context
+    : IS_BIND && own ? _ctx(out, _global)
+    // wrap global constructors for prevent change them in library
+    : IS_WRAP && target[key] == out ? (function (C) {
+      var F = function (a, b, c) {
+        if (this instanceof C) {
+          switch (arguments.length) {
+            case 0: return new C();
+            case 1: return new C(a);
+            case 2: return new C(a, b);
+          } return new C(a, b, c);
+        } return C.apply(this, arguments);
+      };
+      F[PROTOTYPE] = C[PROTOTYPE];
+      return F;
+    // make static versions for prototype methods
+    })(out) : IS_PROTO && typeof out == 'function' ? _ctx(Function.call, out) : out;
+    // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
+    if (IS_PROTO) {
+      (exports.virtual || (exports.virtual = {}))[key] = out;
+      // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
+      if (type & $export.R && expProto && !expProto[key]) _hide(expProto, key, out);
+    }
+  }
+};
+// type bitmap
+$export.F = 1;   // forced
+$export.G = 2;   // global
+$export.S = 4;   // static
+$export.P = 8;   // proto
+$export.B = 16;  // bind
+$export.W = 32;  // wrap
+$export.U = 64;  // safe
+$export.R = 128; // real proto method for `library`
+var _export = $export;
+
+var _redefine = _hide;
+
+var hasOwnProperty = {}.hasOwnProperty;
+var _has = function (it, key) {
+  return hasOwnProperty.call(it, key);
+};
+
+var _iterators = {};
+
+var toString = {}.toString;
+
+var _cof = function (it) {
+  return toString.call(it).slice(8, -1);
+};
+
+// fallback for non-array-like ES3 and non-enumerable old V8 strings
+
+// eslint-disable-next-line no-prototype-builtins
+var _iobject = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
+  return _cof(it) == 'String' ? it.split('') : Object(it);
+};
+
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+
+
+var _toIobject = function (it) {
+  return _iobject(_defined(it));
+};
+
+// 7.1.15 ToLength
+
+var min = Math.min;
+var _toLength = function (it) {
+  return it > 0 ? min(_toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
+
+var max = Math.max;
+var min$1 = Math.min;
+var _toAbsoluteIndex = function (index, length) {
+  index = _toInteger(index);
+  return index < 0 ? max(index + length, 0) : min$1(index, length);
+};
+
+// false -> Array#indexOf
+// true  -> Array#includes
+
+
+
+var _arrayIncludes = function (IS_INCLUDES) {
+  return function ($this, el, fromIndex) {
+    var O = _toIobject($this);
+    var length = _toLength(O.length);
+    var index = _toAbsoluteIndex(fromIndex, length);
+    var value;
+    // Array#includes uses SameValueZero equality algorithm
+    // eslint-disable-next-line no-self-compare
+    if (IS_INCLUDES && el != el) while (length > index) {
+      value = O[index++];
+      // eslint-disable-next-line no-self-compare
+      if (value != value) return true;
+    // Array#indexOf ignores holes, Array#includes - not
+    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
+      if (O[index] === el) return IS_INCLUDES || index || 0;
+    } return !IS_INCLUDES && -1;
+  };
+};
+
+var SHARED = '__core-js_shared__';
+var store = _global[SHARED] || (_global[SHARED] = {});
+var _shared = function (key) {
+  return store[key] || (store[key] = {});
+};
+
+var id = 0;
+var px = Math.random();
+var _uid = function (key) {
+  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+};
+
+var shared = _shared('keys');
+
+var _sharedKey = function (key) {
+  return shared[key] || (shared[key] = _uid(key));
+};
+
+var arrayIndexOf = _arrayIncludes(false);
+var IE_PROTO$1 = _sharedKey('IE_PROTO');
+
+var _objectKeysInternal = function (object, names) {
+  var O = _toIobject(object);
+  var i = 0;
+  var result = [];
+  var key;
+  for (key in O) if (key != IE_PROTO$1) _has(O, key) && result.push(key);
+  // Don't enum bug & hidden keys
+  while (names.length > i) if (_has(O, key = names[i++])) {
+    ~arrayIndexOf(result, key) || result.push(key);
+  }
+  return result;
+};
+
+// IE 8- don't enum bug keys
+var _enumBugKeys = (
+  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
+).split(',');
+
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+
+
+
+var _objectKeys = Object.keys || function keys(O) {
+  return _objectKeysInternal(O, _enumBugKeys);
+};
+
+var _objectDps = _descriptors ? Object.defineProperties : function defineProperties(O, Properties) {
+  _anObject(O);
+  var keys = _objectKeys(Properties);
+  var length = keys.length;
+  var i = 0;
+  var P;
+  while (length > i) _objectDp.f(O, P = keys[i++], Properties[P]);
+  return O;
+};
+
+var document$2 = _global.document;
+var _html = document$2 && document$2.documentElement;
+
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+
+
+
+var IE_PROTO = _sharedKey('IE_PROTO');
+var Empty = function () { /* empty */ };
+var PROTOTYPE$1 = 'prototype';
+
+// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var createDict = function () {
+  // Thrash, waste and sodomy: IE GC bug
+  var iframe = _domCreate('iframe');
+  var i = _enumBugKeys.length;
+  var lt = '<';
+  var gt = '>';
+  var iframeDocument;
+  iframe.style.display = 'none';
+  _html.appendChild(iframe);
+  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+  // createDict = iframe.contentWindow.Object;
+  // html.removeChild(iframe);
+  iframeDocument = iframe.contentWindow.document;
+  iframeDocument.open();
+  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
+  iframeDocument.close();
+  createDict = iframeDocument.F;
+  while (i--) delete createDict[PROTOTYPE$1][_enumBugKeys[i]];
+  return createDict();
+};
+
+var _objectCreate = Object.create || function create(O, Properties) {
+  var result;
+  if (O !== null) {
+    Empty[PROTOTYPE$1] = _anObject(O);
+    result = new Empty();
+    Empty[PROTOTYPE$1] = null;
+    // add "__proto__" for Object.getPrototypeOf polyfill
+    result[IE_PROTO] = O;
+  } else result = createDict();
+  return Properties === undefined ? result : _objectDps(result, Properties);
+};
+
+var _wks = createCommonjsModule(function (module) {
+var store = _shared('wks');
+
+var Symbol = _global.Symbol;
+var USE_SYMBOL = typeof Symbol == 'function';
+
+var $exports = module.exports = function (name) {
+  return store[name] || (store[name] =
+    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : _uid)('Symbol.' + name));
+};
+
+$exports.store = store;
+});
+
+var def = _objectDp.f;
+
+var TAG = _wks('toStringTag');
+
+var _setToStringTag = function (it, tag, stat) {
+  if (it && !_has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
+};
+
+var IteratorPrototype = {};
+
+// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
+_hide(IteratorPrototype, _wks('iterator'), function () { return this; });
+
+var _iterCreate = function (Constructor, NAME, next) {
+  Constructor.prototype = _objectCreate(IteratorPrototype, { next: _propertyDesc(1, next) });
+  _setToStringTag(Constructor, NAME + ' Iterator');
+};
+
+// 7.1.13 ToObject(argument)
+
+var _toObject = function (it) {
+  return Object(_defined(it));
+};
+
+// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
+
+
+var IE_PROTO$2 = _sharedKey('IE_PROTO');
+var ObjectProto = Object.prototype;
+
+var _objectGpo = Object.getPrototypeOf || function (O) {
+  O = _toObject(O);
+  if (_has(O, IE_PROTO$2)) return O[IE_PROTO$2];
+  if (typeof O.constructor == 'function' && O instanceof O.constructor) {
+    return O.constructor.prototype;
+  } return O instanceof Object ? ObjectProto : null;
+};
+
+var ITERATOR = _wks('iterator');
+var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
+var FF_ITERATOR = '@@iterator';
+var KEYS = 'keys';
+var VALUES = 'values';
+
+var returnThis = function () { return this; };
+
+var _iterDefine = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED) {
+  _iterCreate(Constructor, NAME, next);
+  var getMethod = function (kind) {
+    if (!BUGGY && kind in proto) return proto[kind];
+    switch (kind) {
+      case KEYS: return function keys() { return new Constructor(this, kind); };
+      case VALUES: return function values() { return new Constructor(this, kind); };
+    } return function entries() { return new Constructor(this, kind); };
+  };
+  var TAG = NAME + ' Iterator';
+  var DEF_VALUES = DEFAULT == VALUES;
+  var VALUES_BUG = false;
+  var proto = Base.prototype;
+  var $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT];
+  var $default = (!BUGGY && $native) || getMethod(DEFAULT);
+  var $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined;
+  var $anyNative = NAME == 'Array' ? proto.entries || $native : $native;
+  var methods, key, IteratorPrototype;
+  // Fix native
+  if ($anyNative) {
+    IteratorPrototype = _objectGpo($anyNative.call(new Base()));
+    if (IteratorPrototype !== Object.prototype && IteratorPrototype.next) {
+      // Set @@toStringTag to native iterators
+      _setToStringTag(IteratorPrototype, TAG, true);
+      // fix for some old engines
+      if (!_library && !_has(IteratorPrototype, ITERATOR)) _hide(IteratorPrototype, ITERATOR, returnThis);
+    }
+  }
+  // fix Array#{values, @@iterator}.name in V8 / FF
+  if (DEF_VALUES && $native && $native.name !== VALUES) {
+    VALUES_BUG = true;
+    $default = function values() { return $native.call(this); };
+  }
+  // Define iterator
+  if ((!_library || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
+    _hide(proto, ITERATOR, $default);
+  }
+  // Plug for library
+  _iterators[NAME] = $default;
+  _iterators[TAG] = returnThis;
+  if (DEFAULT) {
+    methods = {
+      values: DEF_VALUES ? $default : getMethod(VALUES),
+      keys: IS_SET ? $default : getMethod(KEYS),
+      entries: $entries
+    };
+    if (FORCED) for (key in methods) {
+      if (!(key in proto)) _redefine(proto, key, methods[key]);
+    } else _export(_export.P + _export.F * (BUGGY || VALUES_BUG), NAME, methods);
+  }
+  return methods;
+};
+
+var $at = _stringAt(true);
+
+// 21.1.3.27 String.prototype[@@iterator]()
+_iterDefine(String, 'String', function (iterated) {
+  this._t = String(iterated); // target
+  this._i = 0;                // next index
+// 21.1.5.2.1 %StringIteratorPrototype%.next()
+}, function () {
+  var O = this._t;
+  var index = this._i;
+  var point;
+  if (index >= O.length) return { value: undefined, done: true };
+  point = $at(O, index);
+  this._i += point.length;
+  return { value: point, done: false };
+});
+
+var _iterStep = function (done, value) {
+  return { value: value, done: !!done };
+};
+
+// 22.1.3.4 Array.prototype.entries()
+// 22.1.3.13 Array.prototype.keys()
+// 22.1.3.29 Array.prototype.values()
+// 22.1.3.30 Array.prototype[@@iterator]()
+var es6_array_iterator = _iterDefine(Array, 'Array', function (iterated, kind) {
+  this._t = _toIobject(iterated); // target
+  this._i = 0;                   // next index
+  this._k = kind;                // kind
+// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
+}, function () {
+  var O = this._t;
+  var kind = this._k;
+  var index = this._i++;
+  if (!O || index >= O.length) {
+    this._t = undefined;
+    return _iterStep(1);
+  }
+  if (kind == 'keys') return _iterStep(0, index);
+  if (kind == 'values') return _iterStep(0, O[index]);
+  return _iterStep(0, [index, O[index]]);
+}, 'values');
+
+// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
+_iterators.Arguments = _iterators.Array;
+
+var TO_STRING_TAG = _wks('toStringTag');
+
+var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
+  'DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,' +
+  'MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,' +
+  'SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,' +
+  'TextTrackList,TouchList').split(',');
+
+for (var i = 0; i < DOMIterables.length; i++) {
+  var NAME = DOMIterables[i];
+  var Collection = _global[NAME];
+  var proto = Collection && Collection.prototype;
+  if (proto && !proto[TO_STRING_TAG]) _hide(proto, TO_STRING_TAG, NAME);
+  _iterators[NAME] = _iterators.Array;
+}
+
+var _redefineAll = function (target, src, safe) {
+  for (var key in src) {
+    if (safe && target[key]) target[key] = src[key];
+    else _hide(target, key, src[key]);
+  } return target;
+};
+
+var _anInstance = function (it, Constructor, name, forbiddenField) {
+  if (!(it instanceof Constructor) || (forbiddenField !== undefined && forbiddenField in it)) {
+    throw TypeError(name + ': incorrect invocation!');
+  } return it;
+};
+
+// call something on iterator step with safe closing on error
+
+var _iterCall = function (iterator, fn, value, entries) {
+  try {
+    return entries ? fn(_anObject(value)[0], value[1]) : fn(value);
+  // 7.4.6 IteratorClose(iterator, completion)
+  } catch (e) {
+    var ret = iterator['return'];
+    if (ret !== undefined) _anObject(ret.call(iterator));
+    throw e;
+  }
+};
+
+// check on default Array iterator
+
+var ITERATOR$1 = _wks('iterator');
+var ArrayProto = Array.prototype;
+
+var _isArrayIter = function (it) {
+  return it !== undefined && (_iterators.Array === it || ArrayProto[ITERATOR$1] === it);
+};
+
+// getting tag from 19.1.3.6 Object.prototype.toString()
+
+var TAG$1 = _wks('toStringTag');
+// ES3 wrong here
+var ARG = _cof(function () { return arguments; }()) == 'Arguments';
+
+// fallback for IE11 Script Access Denied error
+var tryGet = function (it, key) {
+  try {
+    return it[key];
+  } catch (e) { /* empty */ }
+};
+
+var _classof = function (it) {
+  var O, T, B;
+  return it === undefined ? 'Undefined' : it === null ? 'Null'
+    // @@toStringTag case
+    : typeof (T = tryGet(O = Object(it), TAG$1)) == 'string' ? T
+    // builtinTag case
+    : ARG ? _cof(O)
+    // ES3 arguments fallback
+    : (B = _cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
+};
+
+var ITERATOR$2 = _wks('iterator');
+
+var core_getIteratorMethod = _core.getIteratorMethod = function (it) {
+  if (it != undefined) return it[ITERATOR$2]
+    || it['@@iterator']
+    || _iterators[_classof(it)];
+};
+
+var _forOf = createCommonjsModule(function (module) {
+var BREAK = {};
+var RETURN = {};
+var exports = module.exports = function (iterable, entries, fn, that, ITERATOR) {
+  var iterFn = ITERATOR ? function () { return iterable; } : core_getIteratorMethod(iterable);
+  var f = _ctx(fn, that, entries ? 2 : 1);
+  var index = 0;
+  var length, step, iterator, result;
+  if (typeof iterFn != 'function') throw TypeError(iterable + ' is not iterable!');
+  // fast case for arrays with default iterator
+  if (_isArrayIter(iterFn)) for (length = _toLength(iterable.length); length > index; index++) {
+    result = entries ? f(_anObject(step = iterable[index])[0], step[1]) : f(iterable[index]);
+    if (result === BREAK || result === RETURN) return result;
+  } else for (iterator = iterFn.call(iterable); !(step = iterator.next()).done;) {
+    result = _iterCall(iterator, f, step.value, entries);
+    if (result === BREAK || result === RETURN) return result;
+  }
+};
+exports.BREAK = BREAK;
+exports.RETURN = RETURN;
+});
+
+var SPECIES = _wks('species');
+
+var _setSpecies = function (KEY) {
+  var C = typeof _core[KEY] == 'function' ? _core[KEY] : _global[KEY];
+  if (_descriptors && C && !C[SPECIES]) _objectDp.f(C, SPECIES, {
+    configurable: true,
+    get: function () { return this; }
+  });
+};
+
+var _meta = createCommonjsModule(function (module) {
+var META = _uid('meta');
+
+
+var setDesc = _objectDp.f;
+var id = 0;
+var isExtensible = Object.isExtensible || function () {
+  return true;
+};
+var FREEZE = !_fails(function () {
+  return isExtensible(Object.preventExtensions({}));
+});
+var setMeta = function (it) {
+  setDesc(it, META, { value: {
+    i: 'O' + ++id, // object ID
+    w: {}          // weak collections IDs
+  } });
+};
+var fastKey = function (it, create) {
+  // return primitive with prefix
+  if (!_isObject(it)) return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
+  if (!_has(it, META)) {
+    // can't set metadata to uncaught frozen object
+    if (!isExtensible(it)) return 'F';
+    // not necessary to add metadata
+    if (!create) return 'E';
+    // add missing metadata
+    setMeta(it);
+  // return object ID
+  } return it[META].i;
+};
+var getWeak = function (it, create) {
+  if (!_has(it, META)) {
+    // can't set metadata to uncaught frozen object
+    if (!isExtensible(it)) return true;
+    // not necessary to add metadata
+    if (!create) return false;
+    // add missing metadata
+    setMeta(it);
+  // return hash weak collections IDs
+  } return it[META].w;
+};
+// add metadata on freeze-family methods calling
+var onFreeze = function (it) {
+  if (FREEZE && meta.NEED && isExtensible(it) && !_has(it, META)) setMeta(it);
+  return it;
+};
+var meta = module.exports = {
+  KEY: META,
+  NEED: false,
+  fastKey: fastKey,
+  getWeak: getWeak,
+  onFreeze: onFreeze
+};
+});
+
+var _meta_1 = _meta.KEY;
+var _meta_2 = _meta.NEED;
+var _meta_3 = _meta.fastKey;
+var _meta_4 = _meta.getWeak;
+var _meta_5 = _meta.onFreeze;
+
+var _validateCollection = function (it, TYPE) {
+  if (!_isObject(it) || it._t !== TYPE) throw TypeError('Incompatible receiver, ' + TYPE + ' required!');
+  return it;
+};
+
+var dP$1 = _objectDp.f;
+
+
+
+
+
+
+
+
+
+var fastKey = _meta.fastKey;
+
+var SIZE = _descriptors ? '_s' : 'size';
+
+var getEntry = function (that, key) {
+  // fast case
+  var index = fastKey(key);
+  var entry;
+  if (index !== 'F') return that._i[index];
+  // frozen object case
+  for (entry = that._f; entry; entry = entry.n) {
+    if (entry.k == key) return entry;
+  }
+};
+
+var _collectionStrong = {
+  getConstructor: function (wrapper, NAME, IS_MAP, ADDER) {
+    var C = wrapper(function (that, iterable) {
+      _anInstance(that, C, NAME, '_i');
+      that._t = NAME;         // collection type
+      that._i = _objectCreate(null); // index
+      that._f = undefined;    // first entry
+      that._l = undefined;    // last entry
+      that[SIZE] = 0;         // size
+      if (iterable != undefined) _forOf(iterable, IS_MAP, that[ADDER], that);
+    });
+    _redefineAll(C.prototype, {
+      // 23.1.3.1 Map.prototype.clear()
+      // 23.2.3.2 Set.prototype.clear()
+      clear: function clear() {
+        for (var that = _validateCollection(this, NAME), data = that._i, entry = that._f; entry; entry = entry.n) {
+          entry.r = true;
+          if (entry.p) entry.p = entry.p.n = undefined;
+          delete data[entry.i];
+        }
+        that._f = that._l = undefined;
+        that[SIZE] = 0;
+      },
+      // 23.1.3.3 Map.prototype.delete(key)
+      // 23.2.3.4 Set.prototype.delete(value)
+      'delete': function (key) {
+        var that = _validateCollection(this, NAME);
+        var entry = getEntry(that, key);
+        if (entry) {
+          var next = entry.n;
+          var prev = entry.p;
+          delete that._i[entry.i];
+          entry.r = true;
+          if (prev) prev.n = next;
+          if (next) next.p = prev;
+          if (that._f == entry) that._f = next;
+          if (that._l == entry) that._l = prev;
+          that[SIZE]--;
+        } return !!entry;
+      },
+      // 23.2.3.6 Set.prototype.forEach(callbackfn, thisArg = undefined)
+      // 23.1.3.5 Map.prototype.forEach(callbackfn, thisArg = undefined)
+      forEach: function forEach(callbackfn /* , that = undefined */) {
+        _validateCollection(this, NAME);
+        var f = _ctx(callbackfn, arguments.length > 1 ? arguments[1] : undefined, 3);
+        var entry;
+        while (entry = entry ? entry.n : this._f) {
+          f(entry.v, entry.k, this);
+          // revert to the last existing entry
+          while (entry && entry.r) entry = entry.p;
+        }
+      },
+      // 23.1.3.7 Map.prototype.has(key)
+      // 23.2.3.7 Set.prototype.has(value)
+      has: function has(key) {
+        return !!getEntry(_validateCollection(this, NAME), key);
+      }
+    });
+    if (_descriptors) dP$1(C.prototype, 'size', {
+      get: function () {
+        return _validateCollection(this, NAME)[SIZE];
+      }
+    });
+    return C;
+  },
+  def: function (that, key, value) {
+    var entry = getEntry(that, key);
+    var prev, index;
+    // change existing entry
+    if (entry) {
+      entry.v = value;
+    // create new entry
+    } else {
+      that._l = entry = {
+        i: index = fastKey(key, true), // <- index
+        k: key,                        // <- key
+        v: value,                      // <- value
+        p: prev = that._l,             // <- previous entry
+        n: undefined,                  // <- next entry
+        r: false                       // <- removed
+      };
+      if (!that._f) that._f = entry;
+      if (prev) prev.n = entry;
+      that[SIZE]++;
+      // add to index
+      if (index !== 'F') that._i[index] = entry;
+    } return that;
+  },
+  getEntry: getEntry,
+  setStrong: function (C, NAME, IS_MAP) {
+    // add .keys, .values, .entries, [@@iterator]
+    // 23.1.3.4, 23.1.3.8, 23.1.3.11, 23.1.3.12, 23.2.3.5, 23.2.3.8, 23.2.3.10, 23.2.3.11
+    _iterDefine(C, NAME, function (iterated, kind) {
+      this._t = _validateCollection(iterated, NAME); // target
+      this._k = kind;                     // kind
+      this._l = undefined;                // previous
+    }, function () {
+      var that = this;
+      var kind = that._k;
+      var entry = that._l;
+      // revert to the last existing entry
+      while (entry && entry.r) entry = entry.p;
+      // get next entry
+      if (!that._t || !(that._l = entry = entry ? entry.n : that._t._f)) {
+        // or finish the iteration
+        that._t = undefined;
+        return _iterStep(1);
+      }
+      // return step by kind
+      if (kind == 'keys') return _iterStep(0, entry.k);
+      if (kind == 'values') return _iterStep(0, entry.v);
+      return _iterStep(0, [entry.k, entry.v]);
+    }, IS_MAP ? 'entries' : 'values', !IS_MAP, true);
+
+    // add [@@species], 23.1.2.2, 23.2.2.2
+    _setSpecies(NAME);
+  }
+};
+
+// 7.2.2 IsArray(argument)
+
+var _isArray = Array.isArray || function isArray(arg) {
+  return _cof(arg) == 'Array';
+};
+
+var SPECIES$1 = _wks('species');
+
+var _arraySpeciesConstructor = function (original) {
+  var C;
+  if (_isArray(original)) {
+    C = original.constructor;
+    // cross-realm fallback
+    if (typeof C == 'function' && (C === Array || _isArray(C.prototype))) C = undefined;
+    if (_isObject(C)) {
+      C = C[SPECIES$1];
+      if (C === null) C = undefined;
+    }
+  } return C === undefined ? Array : C;
+};
+
+// 9.4.2.3 ArraySpeciesCreate(originalArray, length)
+
+
+var _arraySpeciesCreate = function (original, length) {
+  return new (_arraySpeciesConstructor(original))(length);
+};
+
+// 0 -> Array#forEach
+// 1 -> Array#map
+// 2 -> Array#filter
+// 3 -> Array#some
+// 4 -> Array#every
+// 5 -> Array#find
+// 6 -> Array#findIndex
+
+
+
+
+
+var _arrayMethods = function (TYPE, $create) {
+  var IS_MAP = TYPE == 1;
+  var IS_FILTER = TYPE == 2;
+  var IS_SOME = TYPE == 3;
+  var IS_EVERY = TYPE == 4;
+  var IS_FIND_INDEX = TYPE == 6;
+  var NO_HOLES = TYPE == 5 || IS_FIND_INDEX;
+  var create = $create || _arraySpeciesCreate;
+  return function ($this, callbackfn, that) {
+    var O = _toObject($this);
+    var self = _iobject(O);
+    var f = _ctx(callbackfn, that, 3);
+    var length = _toLength(self.length);
+    var index = 0;
+    var result = IS_MAP ? create($this, length) : IS_FILTER ? create($this, 0) : undefined;
+    var val, res;
+    for (;length > index; index++) if (NO_HOLES || index in self) {
+      val = self[index];
+      res = f(val, index, O);
+      if (TYPE) {
+        if (IS_MAP) result[index] = res;   // map
+        else if (res) switch (TYPE) {
+          case 3: return true;             // some
+          case 5: return val;              // find
+          case 6: return index;            // findIndex
+          case 2: result.push(val);        // filter
+        } else if (IS_EVERY) return false; // every
+      }
+    }
+    return IS_FIND_INDEX ? -1 : IS_SOME || IS_EVERY ? IS_EVERY : result;
+  };
+};
+
+var dP$2 = _objectDp.f;
+var each = _arrayMethods(0);
+
+
+var _collection = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
+  var Base = _global[NAME];
+  var C = Base;
+  var ADDER = IS_MAP ? 'set' : 'add';
+  var proto = C && C.prototype;
+  var O = {};
+  if (!_descriptors || typeof C != 'function' || !(IS_WEAK || proto.forEach && !_fails(function () {
+    new C().entries().next();
+  }))) {
+    // create collection constructor
+    C = common.getConstructor(wrapper, NAME, IS_MAP, ADDER);
+    _redefineAll(C.prototype, methods);
+    _meta.NEED = true;
+  } else {
+    C = wrapper(function (target, iterable) {
+      _anInstance(target, C, NAME, '_c');
+      target._c = new Base();
+      if (iterable != undefined) _forOf(iterable, IS_MAP, target[ADDER], target);
+    });
+    each('add,clear,delete,forEach,get,has,set,keys,values,entries,toJSON'.split(','), function (KEY) {
+      var IS_ADDER = KEY == 'add' || KEY == 'set';
+      if (KEY in proto && !(IS_WEAK && KEY == 'clear')) _hide(C.prototype, KEY, function (a, b) {
+        _anInstance(this, C, KEY);
+        if (!IS_ADDER && IS_WEAK && !_isObject(a)) return KEY == 'get' ? undefined : false;
+        var result = this._c[KEY](a === 0 ? 0 : a, b);
+        return IS_ADDER ? this : result;
+      });
+    });
+    IS_WEAK || dP$2(C.prototype, 'size', {
+      get: function () {
+        return this._c.size;
+      }
+    });
+  }
+
+  _setToStringTag(C, NAME);
+
+  O[NAME] = C;
+  _export(_export.G + _export.W + _export.F, O);
+
+  if (!IS_WEAK) common.setStrong(C, NAME, IS_MAP);
+
+  return C;
+};
+
+var MAP = 'Map';
+
+// 23.1 Map Objects
+var es6_map = _collection(MAP, function (get) {
+  return function Map() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
+}, {
+  // 23.1.3.6 Map.prototype.get(key)
+  get: function get(key) {
+    var entry = _collectionStrong.getEntry(_validateCollection(this, MAP), key);
+    return entry && entry.v;
+  },
+  // 23.1.3.9 Map.prototype.set(key, value)
+  set: function set(key, value) {
+    return _collectionStrong.def(_validateCollection(this, MAP), key === 0 ? 0 : key, value);
+  }
+}, _collectionStrong, true);
+
+var _arrayFromIterable = function (iter, ITERATOR) {
+  var result = [];
+  _forOf(iter, false, result.push, result, ITERATOR);
+  return result;
+};
+
+// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+
+
+var _collectionToJson = function (NAME) {
+  return function toJSON() {
+    if (_classof(this) != NAME) throw TypeError(NAME + "#toJSON isn't generic");
+    return _arrayFromIterable(this);
+  };
+};
+
+// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+
+
+_export(_export.P + _export.R, 'Map', { toJSON: _collectionToJson('Map') });
+
+// https://tc39.github.io/proposal-setmap-offrom/
+
+
+var _setCollectionOf = function (COLLECTION) {
+  _export(_export.S, COLLECTION, { of: function of() {
+    var length = arguments.length;
+    var A = new Array(length);
+    while (length--) A[length] = arguments[length];
+    return new this(A);
+  } });
+};
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
+_setCollectionOf('Map');
+
+// https://tc39.github.io/proposal-setmap-offrom/
+
+
+
+
+
+var _setCollectionFrom = function (COLLECTION) {
+  _export(_export.S, COLLECTION, { from: function from(source /* , mapFn, thisArg */) {
+    var mapFn = arguments[1];
+    var mapping, A, n, cb;
+    _aFunction(this);
+    mapping = mapFn !== undefined;
+    if (mapping) _aFunction(mapFn);
+    if (source == undefined) return new this();
+    A = [];
+    if (mapping) {
+      n = 0;
+      cb = _ctx(mapFn, arguments[2], 2);
+      _forOf(source, false, function (nextItem) {
+        A.push(cb(nextItem, n++));
+      });
+    } else {
+      _forOf(source, false, A.push, A);
+    }
+    return new this(A);
+  } });
+};
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
+_setCollectionFrom('Map');
+
+var map$1 = _core.Map;
+
+var map = createCommonjsModule(function (module) {
+module.exports = { "default": map$1, __esModule: true };
+});
+
+var _Map = unwrapExports(map);
+
+// 7.3.20 SpeciesConstructor(O, defaultConstructor)
+
+
+var SPECIES$2 = _wks('species');
+var _speciesConstructor = function (O, D) {
+  var C = _anObject(O).constructor;
+  var S;
+  return C === undefined || (S = _anObject(C)[SPECIES$2]) == undefined ? D : _aFunction(S);
+};
+
+// fast apply, http://jsperf.lnkit.com/fast-apply/5
+var _invoke = function (fn, args, that) {
+  var un = that === undefined;
+  switch (args.length) {
+    case 0: return un ? fn()
+                      : fn.call(that);
+    case 1: return un ? fn(args[0])
+                      : fn.call(that, args[0]);
+    case 2: return un ? fn(args[0], args[1])
+                      : fn.call(that, args[0], args[1]);
+    case 3: return un ? fn(args[0], args[1], args[2])
+                      : fn.call(that, args[0], args[1], args[2]);
+    case 4: return un ? fn(args[0], args[1], args[2], args[3])
+                      : fn.call(that, args[0], args[1], args[2], args[3]);
+  } return fn.apply(that, args);
+};
+
+var process$1 = _global.process;
+var setTask = _global.setImmediate;
+var clearTask = _global.clearImmediate;
+var MessageChannel = _global.MessageChannel;
+var Dispatch = _global.Dispatch;
+var counter = 0;
+var queue = {};
+var ONREADYSTATECHANGE = 'onreadystatechange';
+var defer;
+var channel;
+var port;
+var run = function () {
+  var id = +this;
+  // eslint-disable-next-line no-prototype-builtins
+  if (queue.hasOwnProperty(id)) {
+    var fn = queue[id];
+    delete queue[id];
+    fn();
+  }
+};
+var listener = function (event) {
+  run.call(event.data);
+};
+// Node.js 0.9+ & IE10+ has setImmediate, otherwise:
+if (!setTask || !clearTask) {
+  setTask = function setImmediate(fn) {
+    var args = [];
+    var i = 1;
+    while (arguments.length > i) args.push(arguments[i++]);
+    queue[++counter] = function () {
+      // eslint-disable-next-line no-new-func
+      _invoke(typeof fn == 'function' ? fn : Function(fn), args);
+    };
+    defer(counter);
+    return counter;
+  };
+  clearTask = function clearImmediate(id) {
+    delete queue[id];
+  };
+  // Node.js 0.8-
+  if (_cof(process$1) == 'process') {
+    defer = function (id) {
+      process$1.nextTick(_ctx(run, id, 1));
+    };
+  // Sphere (JS game engine) Dispatch API
+  } else if (Dispatch && Dispatch.now) {
+    defer = function (id) {
+      Dispatch.now(_ctx(run, id, 1));
+    };
+  // Browsers with MessageChannel, includes WebWorkers
+  } else if (MessageChannel) {
+    channel = new MessageChannel();
+    port = channel.port2;
+    channel.port1.onmessage = listener;
+    defer = _ctx(port.postMessage, port, 1);
+  // Browsers with postMessage, skip WebWorkers
+  // IE8 has postMessage, but it's sync & typeof its postMessage is 'object'
+  } else if (_global.addEventListener && typeof postMessage == 'function' && !_global.importScripts) {
+    defer = function (id) {
+      _global.postMessage(id + '', '*');
+    };
+    _global.addEventListener('message', listener, false);
+  // IE8-
+  } else if (ONREADYSTATECHANGE in _domCreate('script')) {
+    defer = function (id) {
+      _html.appendChild(_domCreate('script'))[ONREADYSTATECHANGE] = function () {
+        _html.removeChild(this);
+        run.call(id);
+      };
+    };
+  // Rest old browsers
+  } else {
+    defer = function (id) {
+      setTimeout(_ctx(run, id, 1), 0);
+    };
+  }
+}
+var _task = {
+  set: setTask,
+  clear: clearTask
+};
+
+var macrotask = _task.set;
+var Observer = _global.MutationObserver || _global.WebKitMutationObserver;
+var process$2 = _global.process;
+var Promise$1 = _global.Promise;
+var isNode$1 = _cof(process$2) == 'process';
+
+var _microtask = function () {
+  var head, last, notify;
+
+  var flush = function () {
+    var parent, fn;
+    if (isNode$1 && (parent = process$2.domain)) parent.exit();
+    while (head) {
+      fn = head.fn;
+      head = head.next;
+      try {
+        fn();
+      } catch (e) {
+        if (head) notify();
+        else last = undefined;
+        throw e;
+      }
+    } last = undefined;
+    if (parent) parent.enter();
+  };
+
+  // Node.js
+  if (isNode$1) {
+    notify = function () {
+      process$2.nextTick(flush);
+    };
+  // browsers with MutationObserver, except iOS Safari - https://github.com/zloirock/core-js/issues/339
+  } else if (Observer && !(_global.navigator && _global.navigator.standalone)) {
+    var toggle = true;
+    var node = document.createTextNode('');
+    new Observer(flush).observe(node, { characterData: true }); // eslint-disable-line no-new
+    notify = function () {
+      node.data = toggle = !toggle;
+    };
+  // environments with maybe non-completely correct, but existent Promise
+  } else if (Promise$1 && Promise$1.resolve) {
+    var promise = Promise$1.resolve();
+    notify = function () {
+      promise.then(flush);
+    };
+  // for other environments - macrotask based on:
+  // - setImmediate
+  // - MessageChannel
+  // - window.postMessag
+  // - onreadystatechange
+  // - setTimeout
+  } else {
+    notify = function () {
+      // strange IE + webpack dev server bug - use .call(global)
+      macrotask.call(_global, flush);
+    };
+  }
+
+  return function (fn) {
+    var task = { fn: fn, next: undefined };
+    if (last) last.next = task;
+    if (!head) {
+      head = task;
+      notify();
+    } last = task;
+  };
+};
+
+// 25.4.1.5 NewPromiseCapability(C)
+
+
+function PromiseCapability(C) {
+  var resolve, reject;
+  this.promise = new C(function ($$resolve, $$reject) {
+    if (resolve !== undefined || reject !== undefined) throw TypeError('Bad Promise constructor');
+    resolve = $$resolve;
+    reject = $$reject;
+  });
+  this.resolve = _aFunction(resolve);
+  this.reject = _aFunction(reject);
+}
+
+var f$1 = function (C) {
+  return new PromiseCapability(C);
+};
+
+var _newPromiseCapability = {
+	f: f$1
+};
+
+var _perform = function (exec) {
+  try {
+    return { e: false, v: exec() };
+  } catch (e) {
+    return { e: true, v: e };
+  }
+};
+
+var _promiseResolve = function (C, x) {
+  _anObject(C);
+  if (_isObject(x) && x.constructor === C) return x;
+  var promiseCapability = _newPromiseCapability.f(C);
+  var resolve = promiseCapability.resolve;
+  resolve(x);
+  return promiseCapability.promise;
+};
+
+var ITERATOR$3 = _wks('iterator');
+var SAFE_CLOSING = false;
+
+try {
+  var riter = [7][ITERATOR$3]();
+  riter['return'] = function () { SAFE_CLOSING = true; };
+  // eslint-disable-next-line no-throw-literal
+  
+} catch (e) { /* empty */ }
+
+var _iterDetect = function (exec, skipClosing) {
+  if (!skipClosing && !SAFE_CLOSING) return false;
+  var safe = false;
+  try {
+    var arr = [7];
+    var iter = arr[ITERATOR$3]();
+    iter.next = function () { return { done: safe = true }; };
+    arr[ITERATOR$3] = function () { return iter; };
+    exec(arr);
+  } catch (e) { /* empty */ }
+  return safe;
+};
+
+var task = _task.set;
+var microtask = _microtask();
+
+
+
+var PROMISE = 'Promise';
+var TypeError$1 = _global.TypeError;
+var process = _global.process;
+var $Promise = _global[PROMISE];
+var isNode = _classof(process) == 'process';
+var empty = function () { /* empty */ };
+var Internal;
+var newGenericPromiseCapability;
+var OwnPromiseCapability;
+var Wrapper;
+var newPromiseCapability = newGenericPromiseCapability = _newPromiseCapability.f;
+
+var USE_NATIVE = !!function () {
+  try {
+    // correct subclassing with @@species support
+    var promise = $Promise.resolve(1);
+    var FakePromise = (promise.constructor = {})[_wks('species')] = function (exec) {
+      exec(empty, empty);
+    };
+    // unhandled rejections tracking support, NodeJS Promise without it fails @@species test
+    return (isNode || typeof PromiseRejectionEvent == 'function') && promise.then(empty) instanceof FakePromise;
+  } catch (e) { /* empty */ }
+}();
+
+// helpers
+var isThenable = function (it) {
+  var then;
+  return _isObject(it) && typeof (then = it.then) == 'function' ? then : false;
+};
+var notify = function (promise, isReject) {
+  if (promise._n) return;
+  promise._n = true;
+  var chain = promise._c;
+  microtask(function () {
+    var value = promise._v;
+    var ok = promise._s == 1;
+    var i = 0;
+    var run = function (reaction) {
+      var handler = ok ? reaction.ok : reaction.fail;
+      var resolve = reaction.resolve;
+      var reject = reaction.reject;
+      var domain = reaction.domain;
+      var result, then;
+      try {
+        if (handler) {
+          if (!ok) {
+            if (promise._h == 2) onHandleUnhandled(promise);
+            promise._h = 1;
+          }
+          if (handler === true) result = value;
+          else {
+            if (domain) domain.enter();
+            result = handler(value);
+            if (domain) domain.exit();
+          }
+          if (result === reaction.promise) {
+            reject(TypeError$1('Promise-chain cycle'));
+          } else if (then = isThenable(result)) {
+            then.call(result, resolve, reject);
+          } else resolve(result);
+        } else reject(value);
+      } catch (e) {
+        reject(e);
+      }
+    };
+    while (chain.length > i) run(chain[i++]); // variable length - can't use forEach
+    promise._c = [];
+    promise._n = false;
+    if (isReject && !promise._h) onUnhandled(promise);
+  });
+};
+var onUnhandled = function (promise) {
+  task.call(_global, function () {
+    var value = promise._v;
+    var unhandled = isUnhandled(promise);
+    var result, handler, console;
+    if (unhandled) {
+      result = _perform(function () {
+        if (isNode) {
+          process.emit('unhandledRejection', value, promise);
+        } else if (handler = _global.onunhandledrejection) {
+          handler({ promise: promise, reason: value });
+        } else if ((console = _global.console) && console.error) {
+          console.error('Unhandled promise rejection', value);
+        }
+      });
+      // Browsers should not trigger `rejectionHandled` event if it was handled here, NodeJS - should
+      promise._h = isNode || isUnhandled(promise) ? 2 : 1;
+    } promise._a = undefined;
+    if (unhandled && result.e) throw result.v;
+  });
+};
+var isUnhandled = function (promise) {
+  return promise._h !== 1 && (promise._a || promise._c).length === 0;
+};
+var onHandleUnhandled = function (promise) {
+  task.call(_global, function () {
+    var handler;
+    if (isNode) {
+      process.emit('rejectionHandled', promise);
+    } else if (handler = _global.onrejectionhandled) {
+      handler({ promise: promise, reason: promise._v });
+    }
+  });
+};
+var $reject = function (value) {
+  var promise = this;
+  if (promise._d) return;
+  promise._d = true;
+  promise = promise._w || promise; // unwrap
+  promise._v = value;
+  promise._s = 2;
+  if (!promise._a) promise._a = promise._c.slice();
+  notify(promise, true);
+};
+var $resolve = function (value) {
+  var promise = this;
+  var then;
+  if (promise._d) return;
+  promise._d = true;
+  promise = promise._w || promise; // unwrap
+  try {
+    if (promise === value) throw TypeError$1("Promise can't be resolved itself");
+    if (then = isThenable(value)) {
+      microtask(function () {
+        var wrapper = { _w: promise, _d: false }; // wrap
+        try {
+          then.call(value, _ctx($resolve, wrapper, 1), _ctx($reject, wrapper, 1));
+        } catch (e) {
+          $reject.call(wrapper, e);
+        }
+      });
+    } else {
+      promise._v = value;
+      promise._s = 1;
+      notify(promise, false);
+    }
+  } catch (e) {
+    $reject.call({ _w: promise, _d: false }, e); // wrap
+  }
+};
+
+// constructor polyfill
+if (!USE_NATIVE) {
+  // 25.4.3.1 Promise(executor)
+  $Promise = function Promise(executor) {
+    _anInstance(this, $Promise, PROMISE, '_h');
+    _aFunction(executor);
+    Internal.call(this);
+    try {
+      executor(_ctx($resolve, this, 1), _ctx($reject, this, 1));
+    } catch (err) {
+      $reject.call(this, err);
+    }
+  };
+  // eslint-disable-next-line no-unused-vars
+  Internal = function Promise(executor) {
+    this._c = [];             // <- awaiting reactions
+    this._a = undefined;      // <- checked in isUnhandled reactions
+    this._s = 0;              // <- state
+    this._d = false;          // <- done
+    this._v = undefined;      // <- value
+    this._h = 0;              // <- rejection state, 0 - default, 1 - handled, 2 - unhandled
+    this._n = false;          // <- notify
+  };
+  Internal.prototype = _redefineAll($Promise.prototype, {
+    // 25.4.5.3 Promise.prototype.then(onFulfilled, onRejected)
+    then: function then(onFulfilled, onRejected) {
+      var reaction = newPromiseCapability(_speciesConstructor(this, $Promise));
+      reaction.ok = typeof onFulfilled == 'function' ? onFulfilled : true;
+      reaction.fail = typeof onRejected == 'function' && onRejected;
+      reaction.domain = isNode ? process.domain : undefined;
+      this._c.push(reaction);
+      if (this._a) this._a.push(reaction);
+      if (this._s) notify(this, false);
+      return reaction.promise;
+    },
+    // 25.4.5.1 Promise.prototype.catch(onRejected)
+    'catch': function (onRejected) {
+      return this.then(undefined, onRejected);
+    }
+  });
+  OwnPromiseCapability = function () {
+    var promise = new Internal();
+    this.promise = promise;
+    this.resolve = _ctx($resolve, promise, 1);
+    this.reject = _ctx($reject, promise, 1);
+  };
+  _newPromiseCapability.f = newPromiseCapability = function (C) {
+    return C === $Promise || C === Wrapper
+      ? new OwnPromiseCapability(C)
+      : newGenericPromiseCapability(C);
+  };
+}
+
+_export(_export.G + _export.W + _export.F * !USE_NATIVE, { Promise: $Promise });
+_setToStringTag($Promise, PROMISE);
+_setSpecies(PROMISE);
+Wrapper = _core[PROMISE];
+
+// statics
+_export(_export.S + _export.F * !USE_NATIVE, PROMISE, {
+  // 25.4.4.5 Promise.reject(r)
+  reject: function reject(r) {
+    var capability = newPromiseCapability(this);
+    var $$reject = capability.reject;
+    $$reject(r);
+    return capability.promise;
+  }
+});
+_export(_export.S + _export.F * (_library || !USE_NATIVE), PROMISE, {
+  // 25.4.4.6 Promise.resolve(x)
+  resolve: function resolve(x) {
+    return _promiseResolve(_library && this === Wrapper ? $Promise : this, x);
+  }
+});
+_export(_export.S + _export.F * !(USE_NATIVE && _iterDetect(function (iter) {
+  $Promise.all(iter)['catch'](empty);
+})), PROMISE, {
+  // 25.4.4.1 Promise.all(iterable)
+  all: function all(iterable) {
+    var C = this;
+    var capability = newPromiseCapability(C);
+    var resolve = capability.resolve;
+    var reject = capability.reject;
+    var result = _perform(function () {
+      var values = [];
+      var index = 0;
+      var remaining = 1;
+      _forOf(iterable, false, function (promise) {
+        var $index = index++;
+        var alreadyCalled = false;
+        values.push(undefined);
+        remaining++;
+        C.resolve(promise).then(function (value) {
+          if (alreadyCalled) return;
+          alreadyCalled = true;
+          values[$index] = value;
+          --remaining || resolve(values);
+        }, reject);
+      });
+      --remaining || resolve(values);
+    });
+    if (result.e) reject(result.v);
+    return capability.promise;
+  },
+  // 25.4.4.4 Promise.race(iterable)
+  race: function race(iterable) {
+    var C = this;
+    var capability = newPromiseCapability(C);
+    var reject = capability.reject;
+    var result = _perform(function () {
+      _forOf(iterable, false, function (promise) {
+        C.resolve(promise).then(capability.resolve, reject);
+      });
+    });
+    if (result.e) reject(result.v);
+    return capability.promise;
+  }
+});
+
+_export(_export.P + _export.R, 'Promise', { 'finally': function (onFinally) {
+  var C = _speciesConstructor(this, _core.Promise || _global.Promise);
+  var isFunction = typeof onFinally == 'function';
+  return this.then(
+    isFunction ? function (x) {
+      return _promiseResolve(C, onFinally()).then(function () { return x; });
+    } : onFinally,
+    isFunction ? function (e) {
+      return _promiseResolve(C, onFinally()).then(function () { throw e; });
+    } : onFinally
+  );
+} });
+
+// https://github.com/tc39/proposal-promise-try
+
+
+
+
+_export(_export.S, 'Promise', { 'try': function (callbackfn) {
+  var promiseCapability = _newPromiseCapability.f(this);
+  var result = _perform(callbackfn);
+  (result.e ? promiseCapability.reject : promiseCapability.resolve)(result.v);
+  return promiseCapability.promise;
+} });
+
+var promise$1 = _core.Promise;
+
+var promise = createCommonjsModule(function (module) {
+module.exports = { "default": promise$1, __esModule: true };
+});
+
+var _Promise = unwrapExports(promise);
+
+var asyncToGenerator = createCommonjsModule(function (module, exports) {
+exports.__esModule = true;
+
+
+
+var _promise2 = _interopRequireDefault(promise);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (fn) {
+  return function () {
+    var gen = fn.apply(this, arguments);
+    return new _promise2.default(function (resolve, reject) {
+      function step(key, arg) {
+        try {
+          var info = gen[key](arg);
+          var value = info.value;
+        } catch (error) {
+          reject(error);
+          return;
+        }
+
+        if (info.done) {
+          resolve(value);
+        } else {
+          return _promise2.default.resolve(value).then(function (value) {
+            step("next", value);
+          }, function (err) {
+            step("throw", err);
+          });
+        }
+      }
+
+      return step("next");
+    });
+  };
+};
+});
+
+var _asyncToGenerator = unwrapExports(asyncToGenerator);
+
+/* @flow */
+
+var isDefined = function isDefined(value) {
+  return value != null;
+};
+
+var isString = function isString(value) {
+  return typeof value === 'string';
+};
+
+var isFunction = function isFunction(value) {
+  return typeof value === 'function';
+};
+
+var ensureArray = function ensureArray(value) {
+  return Array.isArray(value) ? value : [value];
+};
+
+var isGradient = function isGradient(color) {
+  return Array.isArray(color) && !isString(color[0]) && 'value' in color[0];
+};
+
+var ensureColors = function ensureColors(colors) {
+  return isGradient(colors) ? [colors] : ensureArray(colors);
+};
+
+var createCanvas = function createCanvas(w, h) {
+  var canvas = document.createElement('canvas');
+  canvas.width = w;
+  canvas.height = h;
+  return canvas;
+};
+
+var checkBlendsSupport = function checkBlendsSupport() {
+  var canvas = createCanvas(1, 1);
+  var ctx = canvas.getContext('2d');
+  ctx.globalCompositeOperation = 'screen';
+  return ctx.globalCompositeOperation === 'screen';
+};
+
+var hasCanvasBlends = checkBlendsSupport();
+
+/* @flow */
+
+var timeout = function timeout(ms) {
+  return new _Promise(function (resolve) {
+    return setTimeout(resolve, ms);
+  });
+};
+
+var loadImage = function loadImage(url, onLoad) {
+  var image = document.createElement('img');
+  // for now do not throw any error
+  image.onload = image.onerror = function () {
+    return onLoad(image);
+  };
+  image.src = url;
+};
+
+// add a timeout: if the image takes longer than ms just return an empty result in the the promise
+var promisify = function promisify(url, ms) {
+  return new _Promise(function (resolve) {
+    return _Promise.race([loadImage(url, resolve), timeout(ms)]);
+  });
+};
+
+var imageLoader = (function (images, options) {
+  var toLoad = images.map(function (url) {
+    return promisify(url, options.timeout);
+  });
+
+  return _Promise.all(toLoad);
+});
+
+var f$2 = Object.getOwnPropertySymbols;
+
+var _objectGops = {
+	f: f$2
+};
+
+var f$3 = {}.propertyIsEnumerable;
+
+var _objectPie = {
+	f: f$3
+};
+
+// 19.1.2.1 Object.assign(target, source, ...)
+
+
+
+
+
+var $assign = Object.assign;
+
+// should work with symbols and should have deterministic property order (V8 bug)
+var _objectAssign = !$assign || _fails(function () {
+  var A = {};
+  var B = {};
+  // eslint-disable-next-line no-undef
+  var S = Symbol();
+  var K = 'abcdefghijklmnopqrst';
+  A[S] = 7;
+  K.split('').forEach(function (k) { B[k] = k; });
+  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
+}) ? function assign(target, source) { // eslint-disable-line no-unused-vars
+  var T = _toObject(target);
+  var aLen = arguments.length;
+  var index = 1;
+  var getSymbols = _objectGops.f;
+  var isEnum = _objectPie.f;
+  while (aLen > index) {
+    var S = _iobject(arguments[index++]);
+    var keys = getSymbols ? _objectKeys(S).concat(getSymbols(S)) : _objectKeys(S);
+    var length = keys.length;
+    var j = 0;
+    var key;
+    while (length > j) if (isEnum.call(S, key = keys[j++])) T[key] = S[key];
+  } return T;
+} : $assign;
+
+// 19.1.3.1 Object.assign(target, source)
+
+
+_export(_export.S + _export.F, 'Object', { assign: _objectAssign });
+
+var assign$2 = _core.Object.assign;
+
+var assign = createCommonjsModule(function (module) {
+module.exports = { "default": assign$2, __esModule: true };
+});
+
+unwrapExports(assign);
+
+var _extends = createCommonjsModule(function (module, exports) {
+exports.__esModule = true;
+
+
+
+var _assign2 = _interopRequireDefault(assign);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _assign2.default || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+});
+
+var _extends$1 = unwrapExports(_extends);
+
+// most Object methods by ES6 should accept primitives
+
+
+
+var _objectSap = function (KEY, exec) {
+  var fn = (_core.Object || {})[KEY] || Object[KEY];
+  var exp = {};
+  exp[KEY] = exec(fn);
+  _export(_export.S + _export.F * _fails(function () { fn(1); }), 'Object', exp);
+};
+
+// 19.1.2.14 Object.keys(O)
+
+
+
+_objectSap('keys', function () {
+  return function keys(it) {
+    return _objectKeys(_toObject(it));
+  };
+});
+
+var keys$1 = _core.Object.keys;
+
+var keys = createCommonjsModule(function (module) {
+module.exports = { "default": keys$1, __esModule: true };
+});
+
+var _Object$keys = unwrapExports(keys);
+
+/* @flow */
+// Generic function to validate a specific type
+var validator = function validator(oldOptions, defaults, check, ifPasses) {
+  return _Object$keys(defaults).reduce(function (options, field) {
+    options[field] = check(oldOptions[field]) ? ifPasses(oldOptions[field]) : defaults[field];
+    return options;
+  }, {});
+};
+
+// Util functions to manipulate the ensure the original values
+var castToBoolean = function castToBoolean(value) {
+  return !!value;
+};
+var sameValue = function sameValue(value) {
+  return value;
+};
+
+// Public API of the module
+var validator$1 = (function (options, types) {
+  var booleans = validator(options, types.booleans, isDefined, castToBoolean);
+  var strings = validator(options, types.strings, isString, sameValue);
+  var functions = validator(options, types.functions, isFunction, sameValue);
+
+  // now merge all together
+  return _extends$1({}, options, booleans, strings, functions);
+});
+
+var validateStrategy = function validateStrategy(options, strategies) {
+  var value = options.strategy;
+  var defaultFn = strategies.average;
+  // If not defined pass the default
+  if (!value) {
+    return defaultFn;
+  }
+  // If it's a string, check if it is a known strategy or pass the default
+  if (isString(value)) {
+    return strategies[value] || defaultFn;
+  }
+  // Else, either is a function (and use it) or pass the default
+  return isFunction(value) ? value : defaultFn;
+};
+
+// Based on rgb components average value
+var average = (function (r, g, b) {
+  return Math.floor((r + g + b) / 3);
+});
+
+// Based on the human eye perception: ITU-R BT709 Greyscale
+var grayscale = (function (r, g, b) {
+  return Math.floor(0.2125 * r + 0.7154 * g + 0.0721 * b);
+});
+
+/* @flow */
+// Based on luminosity
+var max$1 = Math.max;
+var min$2 = Math.min;
+
+// Put them together in an object now
+var strategies = {
+  average: average,
+  grayscale: grayscale,
+  max: max$1,
+  min: min$2
+};
+
+var _this$1 = undefined;
+
+/* @flow */
+
+// Some greyscale strategies
+var maskMaker = function maskMaker(image, strategy) {
+  var canvas = createCanvas(image.width, image.height);
+  var ctx = canvas.getContext('2d');
+
+  // paste the image in the canvas
+  ctx.drawImage(image, 0, 0);
+  var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  // grab the raw pixels from the imgData
+  var data = imgData.data;
+
+  // TODO: make a WebWorker do this stuff to avoid blocking the main thread
+
+  var maxAvg = 0;
+
+  for (var i = 0; i < data.length; i += 4) {
+    // do not process transparent pixels (fourth component of the pixel data)
+    if (data[i + 3]) {
+      data[i] = data[i + 1] = data[i + 2] = strategy(data[i], data[1], data[2]);
+      // remember the highest average
+      maxAvg = Math.max(maxAvg, data[i]);
+    }
+  }
+
+  // Now find how far the highest average is from the white
+  var toWhite = 255 - maxAvg;
+
+  // Iterate again and push all the averages by $toWhite
+  for (var _i = 0; _i < data.length; _i += 4) {
+    // filter transparent pixels again
+    if (data[_i + 3]) {
+      // it is an average, so the $i value is fine for the whole pixel
+      var pixel = data[_i];
+      data[_i] = data[_i + 1] = data[_i + 2] = pixel + toWhite;
+    }
+  }
+
+  // now paste the processed image (the mask) in the canvas again
+  ctx.putImageData(imgData, 0, 0);
+
+  // return the mask
+  return canvas;
+};
+
+var makeMasksFromImages = function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee(images, options) {
+    var loaded;
+    return regenerator.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return imageLoader(images, options);
+
+          case 2:
+            loaded = _context.sent;
+            return _context.abrupt('return', loaded.reduce(function (memo, image, index) {
+              memo[images[index]] = maskMaker(image, options.strategy);
+              return memo;
+            }, {}));
+
+          case 4:
+          case 'end':
+            return _context.stop();
+        }
+      }
+    }, _callee, _this$1);
+  }));
+
+  return function makeMasksFromImages(_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+// Mask Maker
+var createMasks = (function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee2(images, options) {
+    var defaults, opts, masks;
+    return regenerator.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            images = ensureArray(images);
+
+            defaults = {
+              booleans: {},
+              strings: {},
+              functions: {}
+            };
+            opts = validator$1(options, defaults);
+            // the mask strategy requires a dedicated validator
+
+            opts.strategy = validateStrategy(opts, strategies);
+
+            _context2.next = 6;
+            return makeMasksFromImages(images, opts);
+
+          case 6:
+            masks = _context2.sent;
+            return _context2.abrupt('return', images.map(function (url) {
+              return masks[url];
+            }));
+
+          case 8:
+          case 'end':
+            return _context2.stop();
+        }
+      }
+    }, _callee2, _this$1);
+  }));
+
+  return function (_x3, _x4) {
+    return _ref2.apply(this, arguments);
+  };
+})();
+
+/* @flow */
+
+var recolorLayer = (function (context, color, width, height) {
+  var style = void 0;
+  if (isGradient(color)) {
+    // Linear Gradient top to bottom direction
+    style = context.createLinearGradient(width / 2, 0, width / 2, height);
+    color.forEach(function (stop) {
+      style.addColorStop(stop.value, stop.color);
+    });
+  } else {
+    style = color;
+  }
+  context.fillStyle = style;
+  context.fillRect(0, 0, width, height);
+});
+
+/* @flow */
+
+var recolorWithBlends = (function (mask, targets, colors) {
+  var width = mask.width;
+  var height = mask.height;
+
+  targets.forEach(function (target, index) {
+    var ctx = target.getContext('2d');
+    recolorLayer(ctx, colors[index], width, height);
+    ctx.globalCompositeOperation = 'multiply';
+    ctx.drawImage(mask, 0, 0);
+    ctx.globalCompositeOperation = 'destination-atop';
+    ctx.drawImage(mask, 0, 0);
+  });
+});
+
+/* @flow */
+
+var recolorWithPixelManipulation = (function (mask, targets, colors) {
+  var width = mask.width;
+  var height = mask.height;
+
+  var ctx = mask.getContext('2d');
+  var imgData = ctx.getImageData(0, 0, width, height);
+  var data = imgData.data;
+
+
+  var contextes = [];
+  var datas = [];
+
+  targets.forEach(function (target, index) {
+    var targetCtx = target.getContext('2d');
+    // draw the first layer with the color we want to apply
+    recolorLayer(targetCtx, colors[index], width, height);
+    // dump the data of the recolored image
+    var targetData = targetCtx.getImageData(0, 0, width, height);
+    // now save the references to be processed
+    contextes.push(targetCtx);
+    datas.push(targetData);
+  });
+
+  var colorPixel = function colorPixel(grey) {
+    // return a function
+    return function (data, i) {
+      data[i] = Math.floor(grey * data[i]);
+      data[i + 1] = Math.floor(grey * data[i + 1]);
+      data[i + 2] = Math.floor(grey * data[i + 2]);
+    };
+  };
+
+  // iterate throught the mask raw data
+
+  var _loop = function _loop(i) {
+    var pixelPainter = colorPixel(data[i] / 255);
+    datas.forEach(function (imgData) {
+      // color only pixels with alpha > 0
+      if (data[i + 3]) {
+        pixelPainter(imgData.data, i);
+      }
+      // preserve the alpha of the mask
+      imgData.data[i + 3] = data[i + 3];
+    });
+  };
+
+  for (var i = 0; i < data.length; i += 4) {
+    _loop(i);
+  }
+
+  // now paste the final image in the relative contextes
+  contextes.forEach(function (context, index) {
+    return context.putImageData(datas[index], 0, 0);
+  });
+});
+
+/* @flow */
+var recolorImage = function recolorImage(mask, colors) {
+  var width = mask.width;
+  var height = mask.height;
+
+  // create a new canvas for each new colored version of the image
+  var targets = colors.map(function () {
+    return createCanvas(width, height);
+  });
+
+  // Check the support for advanced canvas features and use the appropriate processor
+  var processor = hasCanvasBlends ? recolorWithBlends : recolorWithPixelManipulation;
+  processor(mask, targets, colors);
+
+  return targets.map(function (canvas) {
+    return canvas.toDataURL();
+  });
+};
+
+var colorize = (function (mask, colors, options) {
+  var defaults = {
+    booleans: {},
+    strings: {},
+    functions: {}
+  };
+
+  options = validator$1(options, defaults);
+  colors = isGradient(colors) ? [colors] : ensureArray(colors);
+
+  return recolorImage(mask, colors);
+});
+
+var _this = undefined;
+
+/* @flow */
+
+var createMask = createMasks;
+var recolor = colorize;
+
+var main = (function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee(images, colors, options) {
+    var masks, recolored;
+    return regenerator.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            images = ensureArray(images);
+            colors = ensureColors(colors);
+
+            _context.next = 4;
+            return createMasks(images, options);
+
+          case 4:
+            masks = _context.sent;
+            recolored = masks.reduce(function (loaded, mask, index) {
+              var url = images[index];
+
+              if (!loaded.has(url)) {
+                loaded.set(url, colorize(mask, colors, options));
+              }
+
+              return loaded;
+            }, new _Map());
+            return _context.abrupt('return', images.map(function (url) {
+              return recolored.get(url);
+            }));
+
+          case 7:
+          case 'end':
+            return _context.stop();
+        }
+      }
+    }, _callee, _this);
+  }));
+
+  return function (_x, _x2, _x3) {
+    return _ref.apply(this, arguments);
+  };
+})();
+
+exports.createMask = createMask;
+exports.recolor = recolor;
+exports['default'] = main;
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
 //# sourceMappingURL=colorify.js.map
